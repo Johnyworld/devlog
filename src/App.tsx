@@ -1,27 +1,10 @@
-import { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import axios from "axios";
+import useGetPosts from "./hooks/useGetPosts";
 
 function App() {
-  useEffect(() => {
-    axios
-      .get("https://api.github.com/repos/johnyworld/dev-archive/readme")
-      .then((res) => {
-        const content = decodeURIComponent(escape(atob(res.data.content)));
-        const match = content
-          .match(/[#]{3}(.+)/g)
-          ?.map((str) => str.replace(/[#]{3} /, ""));
-        const replace = content.match(/\[(.*?)\]\((.*?)\)/g)?.map((str) => {
-          const category = content.split(str)[0].match(/[#]{3}/g)?.length || 0;
-          const [name, path] = str
-            .replace(/\[(.*?)\]\((.*?)\)/g, "$1.$2")
-            .split(".");
-          return { category: match?.[category - 1], name, path: "/" + path };
-        });
-        console.log({ match, content, replace });
-      });
-  });
+  const { data, loading } = useGetPosts();
+  console.log(data, loading);
 
   return (
     <div className="App">
