@@ -10,7 +10,7 @@ type MarkdownLink = string;
 
 const regCategoryLine = /[#]{3}(.+)/g;
 const regCategoryMark = /[#]{3} /g;
-const regLinks = /\[(.*?)\]\((.*?)\)/g;
+const regLinks = /\[(.*?)\]\((.*?)\)( - (.*?)\n)?/g;
 
 const parseReadmeToPosts = (markdown: Markdown): Response => {
   const categories = markdown.match(regCategoryLine)?.map(removeMark) || [];
@@ -20,12 +20,13 @@ const parseReadmeToPosts = (markdown: Markdown): Response => {
     posts:
       markdown.match(regLinks)?.map((linkString: MarkdownLink) => {
         const categoryIndex = findCurrentCategoryIndex(markdown, linkString);
-        const { name, path } = parseMarkdownLinkToObject(linkString);
+        const { name, path, desc } = parseMarkdownLinkToObject(linkString);
 
         return {
           category: categories[categoryIndex],
           name,
           path,
+          desc,
         } as Post;
       }) || [],
   };
@@ -36,9 +37,11 @@ const removeMark = (markdown: Markdown): string =>
 
 const parseMarkdownLinkToObject = (
   linkString: MarkdownLink
-): { name: string; path: string } => {
-  const [name, path] = linkString.replace(regLinks, "$1.$2").split(".");
-  return { name, path: "/" + path };
+): { name: string; path: string; desc: string | undefined } => {
+  const [name, path, desc] = linkString
+    .replace(regLinks, "$1=$2=$3")
+    .split("=");
+  return { name, path: "/" + path, desc: desc.split(" - ")[1] };
 };
 
 const findCurrentCategoryIndex = (
