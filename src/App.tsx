@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import useGetPosts from "./hooks/useGetPosts";
+import "./style/style.css";
 
 function App() {
   const { data, loading } = useGetPosts();

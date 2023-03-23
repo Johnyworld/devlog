@@ -8,7 +8,11 @@ const PostScreen = () => {
     return <p>Error</p>;
   }
 
-  return <PostViewerContainer postName={params.name} />;
+  return (
+    <div style={{ width: "720px", margin: "0 auto" }}>
+      <PostViewerContainer postName={params.name} />
+    </div>
+  );
 };
 
 export default PostScreen;
