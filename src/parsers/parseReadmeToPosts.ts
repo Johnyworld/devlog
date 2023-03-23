@@ -38,10 +38,14 @@ const removeMark = (markdown: Markdown): string =>
 const parseMarkdownLinkToObject = (
   linkString: MarkdownLink
 ): { name: string; path: string; desc: string | undefined } => {
-  const [name, path, desc] = linkString
+  const [name, _path, _desc] = linkString
     .replace(regLinks, "$1=$2=$3")
     .split("=");
-  return { name, path: "/" + path, desc: desc.split(" - ")[1] };
+
+  const path = "/" + _path.replace(".md", "");
+  const desc = _desc.split(" - ")[1];
+
+  return { name, path, desc };
 };
 
 const findCurrentCategoryIndex = (

@@ -8,7 +8,7 @@ const useGetPosts = () => {
   );
 
   if (!dataRaw?.content) {
-    return { data: dataRaw, ...rest };
+    return { data: null, ...rest };
   }
 
   const data = parseReadmeToPosts(
