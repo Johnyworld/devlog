@@ -1,4 +1,5 @@
 import useGetPost from "../../hooks/useGetPost";
+import Markdown from "../views/Markdown";
 
 interface Props {
   postName: string;
@@ -11,7 +12,11 @@ const PostViewerContainer = ({ postName }: Props) => {
     return <div>loading...</div>;
   }
 
-  return <div style={{ whiteSpace: "pre" }}>{data}</div>;
+  if (!data) {
+    return <div>No data</div>;
+  }
+
+  return <Markdown>{data}</Markdown>;
 };
 
 export default PostViewerContainer;
