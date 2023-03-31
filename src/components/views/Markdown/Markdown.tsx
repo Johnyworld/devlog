@@ -1,11 +1,11 @@
-import ReactMarkdown from "react-markdown";
+import MarkdownToJSX from "markdown-to-jsx";
 
 interface Props {
   children: string;
 }
 
 const Markdown = ({ children }: Props) => {
-  return <ReactMarkdown className="markdown">{children}</ReactMarkdown>;
+  return <MarkdownToJSX className="markdown">{children}</MarkdownToJSX>;
 };
 
 export default Markdown;
