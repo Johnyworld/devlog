@@ -1,22 +1,34 @@
-import apis, { GetPostResponse } from "../utils/apis";
-import useFetch from "./useFetch";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 interface Params {
   postName: string;
 }
 
 const useGetPost = ({ postName }: Params) => {
-  const { data: dataRaw, ...rest } = useFetch<GetPostResponse>(
-    apis.getPost(postName)
-  );
+  const [data, setData] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(true);
 
-  if (!dataRaw?.content) {
-    return { data: null, ...rest };
-  }
+  useEffect(() => {
+    axios<{ content: string }>({
+      method: "GET",
+      url: `https://api.github.com/repos/johnyworld/dev-archive/contents/archive/${postName}.md`
+    })
+      .then((res) => {
+        if (res.data.content) {
+          setData(decodeURIComponent(escape(atob(res.data.content))));
+        }
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, [postName]);
 
-  const data = decodeURIComponent(escape(atob(dataRaw.content)));
+  useEffect(() => {
+    setLoading(true);
+  }, [postName]);
 
-  return { data, ...rest };
+  return { data, loading };
 };
 
 export default useGetPost;
