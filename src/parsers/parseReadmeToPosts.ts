@@ -1,6 +1,6 @@
 import { Post } from "type";
 
-interface Response {
+export interface PostsResponse {
   categories: string[];
   posts: Post[];
 }
@@ -12,7 +12,7 @@ const regCategoryLine = /[#]{3}(.+)/g;
 const regCategoryMark = /[#]{3} /g;
 const regLinks = /\[(.*?)\]\((.*?)\)( - (.*?)\n)?/g;
 
-const parseReadmeToPosts = (markdown: Markdown): Response => {
+const parseReadmeToPosts = (markdown: Markdown): PostsResponse => {
   const categories = markdown.match(regCategoryLine)?.map(removeMark) || [];
 
   return {
@@ -26,9 +26,9 @@ const parseReadmeToPosts = (markdown: Markdown): Response => {
           category: categories[categoryIndex],
           name,
           path,
-          desc,
+          desc
         } as Post;
-      }) || [],
+      }) || []
   };
 };
 

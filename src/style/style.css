@@ -17,29 +17,55 @@ h4,
 h5,
 h6 {
   color: #333;
-  margin: 2em 0 1.25em;
+  margin: 2em 0 20px;
+}
+
+h1 {
+  font-size: 46px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 26px;
 }
 
 p {
   line-height: 1.7;
 }
 
+pre {
+  background-color: #ecf1f2;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 20px;
+  margin: 18px -20px;
+  border-radius: 4px;
+}
+
+pre code {
+  padding: 0;
+}
+
 code {
   font-size: 16px;
-  background-color: #f5f5f5;
+  background-color: #ecf1f2;
   padding: 2px 4px;
   border-radius: 4px;
 }
 
-ul {
+ul,
+ol {
   padding-left: 30px;
 }
 
-ul li:not(:first-child) {
+li:not(:first-child) {
   margin-top: 0.5em;
 }
 
-ul li {
+li {
   line-height: 1.5;
 }
 
@@ -47,7 +73,8 @@ blockquote {
   margin: 0;
   padding: 12px 15px;
   border-left: 3px solid #ddd;
-  background-color: #f5f5f5;
+  background-color: #f8f9f9;
+  color: #858c97;
 }
 
 blockquote > *:first-child {
@@ -60,4 +87,29 @@ blockquote > *:last-child {
 
 img {
   width: 100%;
+}
+
+hr {
+  margin: 50px 0;
+  border: 1px solid #dddfe4;
+  border-bottom: 0;
+}
+
+.tag {
+  margin-right: 0.2em;
+  border-radius: 50px;
+  background-color: #daebf2;
+  color: #3e778c;
+  padding: 0.2em 0.5em;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.tag::before {
+  content: "# ";
+}
+
+a:link,
+a:visited {
+  color: #3e778c;
 }
