@@ -9,7 +9,9 @@ interface Props {
 
 const Markdown = ({ children, options }: Props) => {
   return (
-    <MarkdownToJSX className="markdown" options={{ ...options }}>
+    <MarkdownToJSX
+      className="markdown"
+      options={{ ...options, slugify: (str) => str }}>
       {children}
     </MarkdownToJSX>
   );
