@@ -1,0 +1,1 @@
+export { getCategoriesFromPosts } from "./getCategoriesFromPosts";
