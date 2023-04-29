@@ -1,8 +1,8 @@
 declare module "type" {
   interface Post {
-    category: string;
-    name: string;
+    title: string;
     path: string;
-    desc?: string;
+    tags: string[];
+    writtenAt: string;
   }
 }
