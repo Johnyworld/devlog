@@ -5,94 +5,27 @@ body {
   color: #5a5a5a;
 }
 
-strong {
-  font-weight: 700;
-  color: #333;
-}
-
+div,
 h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  color: #333;
-  margin: 2em 0 20px;
-}
-
-h1 {
-  font-size: 46px;
-}
-
-h2 {
-  font-size: 32px;
-}
-
-h3 {
-  font-size: 26px;
-}
-
-p {
-  line-height: 1.7;
-}
-
-pre {
-  background-color: #ecf1f2;
-  overflow-x: auto;
-  overflow-y: visible;
-  padding: 20px;
-  margin: 18px -20px;
-  border-radius: 4px;
-}
-
-pre code {
-  padding: 0;
-}
-
-code {
-  font-size: 16px;
-  background-color: #ecf1f2;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-
+h6,
 ul,
-ol {
-  padding-left: 30px;
-}
-
-li:not(:first-child) {
-  margin-top: 0.5em;
+li,
+p {
+  padding: unset;
+  margin: unset;
 }
 
 li {
-  line-height: 1.5;
+  list-style-type: none;
 }
 
-blockquote {
-  margin: 0;
-  padding: 12px 15px;
-  border-left: 3px solid #ddd;
-  background-color: #f8f9f9;
-  color: #858c97;
-}
-
-blockquote > *:first-child {
-  margin-top: 0;
-}
-
-blockquote > *:last-child {
-  margin-bottom: 0;
-}
-
-img {
-  width: 100%;
-}
-
-hr {
-  margin: 50px 0;
-  border: 1px solid #dddfe4;
-  border-bottom: 0;
+strong {
+  font-weight: 700;
+  color: #333;
 }
 
 .tag {
@@ -109,7 +42,6 @@ hr {
   content: "# ";
 }
 
-a:link,
-a:visited {
-  color: #3e778c;
+a {
+  color: unset;
 }

@@ -1,6 +1,7 @@
 import MarkdownToJSX, {
   MarkdownToJSX as MarkdownToJSXType
 } from "markdown-to-jsx";
+import "./Markdown.css";
 
 interface Props {
   children: string;
