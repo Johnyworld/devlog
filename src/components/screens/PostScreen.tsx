@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import PostViewerContainer from "../containers/PostViewerContainer";
-import Center from "../views/layouts/Center/Center";
+import PageContent from "../views/layouts/PageContent/PageContent";
 
 const PostScreen = () => {
   const params = useParams();
@@ -11,9 +11,9 @@ const PostScreen = () => {
 
   return (
     <main className="post-screen">
-      <Center>
+      <PageContent>
         <PostViewerContainer postName={params.name} />
-      </Center>
+      </PageContent>
     </main>
   );
 };

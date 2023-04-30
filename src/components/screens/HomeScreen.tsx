@@ -1,6 +1,6 @@
 import { useSearchParams } from "react-router-dom";
 import useGetPosts from "../../hooks/useGetPosts";
-import Center from "../views/layouts/Center";
+import PageContent from "../views/layouts/PageContent";
 import Categories from "../views/organisms/Categories";
 import { getCategoriesFromPosts } from "../../utils/post";
 import { ALL_CATEGORIES_KEY } from "../../utils/constants";
@@ -19,10 +19,10 @@ const HomeScreen = () => {
 
   return (
     <main className="home-screen">
-      <Center>
+      <PageContent>
         <Categories categories={categories} />
-      </Center>
-      <Center>
+      </PageContent>
+      <PageContent>
         <PostCards
           posts={posts.filter(
             (post) =>
@@ -30,7 +30,7 @@ const HomeScreen = () => {
               post.tags.includes(currentCategory)
           )}
         />
-      </Center>
+      </PageContent>
     </main>
   );
 };
