@@ -10,9 +10,11 @@ const PostScreen = () => {
   }
 
   return (
-    <Center>
-      <PostViewerContainer postName={params.name} />
-    </Center>
+    <main className="post-screen">
+      <Center>
+        <PostViewerContainer postName={params.name} />
+      </Center>
+    </main>
   );
 };
 

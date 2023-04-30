@@ -1,19 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import App from "./App";
 import PostScreen from "./components/screens/PostScreen";
 import reportWebVitals from "./reportWebVitals";
+import HomeScreen from "./components/screens/HomeScreen";
+import "./style/style.css";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <HomeScreen />
   },
   {
     path: "/archive/:name",
-    element: <PostScreen />,
-  },
+    element: <PostScreen />
+  }
 ]);
 
 const root = ReactDOM.createRoot(
