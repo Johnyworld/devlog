@@ -11,6 +11,11 @@
 # production
 /build
 
+# vault data
+/src/vault/*
+!/src/vault/tech
+!/src/vault/resume
+
 # misc
 .DS_Store
 .env.local
