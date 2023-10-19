@@ -1,21 +1,23 @@
-import { Link, useLocation } from "react-router-dom";
-import { ALL_CATEGORIES_KEY } from "../../../../utils/constants";
+'use client';
+
+import { ALL_CATEGORIES_KEY } from '../../../../utils/constants';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 interface Props {
   categories: string[];
 }
 
 const Categories = ({ categories }: Props) => {
-  const location = useLocation();
-
+  const pathname = usePathname();
   return (
     <ul>
       <li key={ALL_CATEGORIES_KEY}>
-        <Link to={`${location.pathname}?c=${ALL_CATEGORIES_KEY}`}>All</Link>
+        <Link href={`${pathname}?c=${ALL_CATEGORIES_KEY}`}>All</Link>
       </li>
-      {categories.map((category) => (
+      {categories.map(category => (
         <li key={category}>
-          <Link to={`${location.pathname}?c=${category}`}>{category}</Link>
+          <Link href={`${pathname}?c=${category}`}>{category}</Link>
         </li>
       ))}
     </ul>
