@@ -8,7 +8,7 @@ interface Props {
 
 const PostCardItem = ({ post }: Props) => {
   return (
-    <Link href={post.path.replace('.md', '')}>
+    <Link href={'post/' + post.title}>
       <div className={base}>
         <h3>{post.title}</h3>
         <p>{post.tags}</p>
