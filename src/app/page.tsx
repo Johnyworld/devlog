@@ -30,7 +30,7 @@ export default async function Page({ searchParams }: Props) {
   const currentCategory = searchParams.c || categories[0];
 
   return (
-    <main className='home-screen'>
+    <main>
       <PageContent>
         <Categories categories={categories} />
       </PageContent>

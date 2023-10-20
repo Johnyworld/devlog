@@ -1,6 +1,5 @@
-import { Post } from "type";
-import PostCardItem from "../../molecules/PostCardItem/PostCardItem";
-import "./PostCards.css";
+import { Post } from 'type';
+import PostCardItem from '../../molecules/PostCardItem/PostCardItem';
 
 interface Props {
   posts: Post[];
@@ -8,8 +7,8 @@ interface Props {
 
 const PostCards = ({ posts }: Props) => {
   return (
-    <ul className="post-cards">
-      {posts.map((post) => {
+    <ul>
+      {posts.map(post => {
         return (
           <li key={post.title}>
             <PostCardItem post={post} />
