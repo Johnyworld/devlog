@@ -1,3 +1,4 @@
+import { parseBase64ToString } from '@utils/parseBase64ToString';
 import { Post } from 'type';
 import PageContent from '../components/views/layouts/PageContent';
 import Categories from '../components/views/organisms/Categories';
@@ -20,7 +21,7 @@ async function getData() {
 }
 
 const parseBase64ToObject = (data: string) => {
-  return JSON.parse(Buffer.from(data, 'base64').toString());
+  return JSON.parse(parseBase64ToString(data));
 };
 
 export default async function Page({ searchParams }: Props) {

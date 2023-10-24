@@ -1,9 +1,9 @@
 import PageContent from '@components/views/layouts/PageContent';
 import Markdown from '@components/views/Markdown';
-import { promises as fs } from 'fs';
 import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
 import Link from 'next/link';
 import { removeExtension } from '@utils/stringUtils';
+import { parseBase64ToString } from '@utils/parseBase64ToString';
 
 interface Props {
   params: {
@@ -12,13 +12,18 @@ interface Props {
 }
 
 async function getData(fileName: string) {
-  const file = await fs.readFile(process.cwd() + `/src/vault/tech/${fileName}.md`, 'utf-8');
-  return file;
+  const res = await fetch(`https://api.github.com/repos/johnyworld/dev-archive/contents/vault/tech/${fileName}`);
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+  return res.json();
 }
 
 export default async function Page({ params }: Props) {
-  const fileName = decodeURI(params.fileName);
+  const fileName = decodeURI(params.fileName) + '.md';
   const data = await getData(fileName);
+  const markdownContent = parseBase64ToString(data.content);
+
   return (
     <main>
       <PageContent>
@@ -27,7 +32,7 @@ export default async function Page({ params }: Props) {
             overrides: { a: OverrideAnchorByLink },
           }}
         >
-          {data}
+          {markdownContent}
         </Markdown>
       </PageContent>
     </main>
