@@ -1,4 +1,7 @@
 export const getRoute = {
+  root: () => {
+    return `/`;
+  },
   post: () => {
     return `/post`;
   },

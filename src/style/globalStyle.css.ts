@@ -7,7 +7,7 @@ globalStyle('body', {
   color: '#5a5a5a',
 });
 
-globalStyle('div, h1, h2, h3, h4, h5, h6, ul, li, p', {
+globalStyle('body, div, h1, h2, h3, h4, h5, h6, ul, li, p', {
   padding: 'unset',
   margin: 'unset',
 });
