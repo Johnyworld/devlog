@@ -1,9 +1,12 @@
 import { globalStyle } from '@vanilla-extract/css';
 
+globalStyle('html', {
+  fontSize: 16,
+});
+
 globalStyle('body', {
   fontFamily: 'sans-serif',
   fontWeight: 400,
-  fontSize: 18,
   color: '#5a5a5a',
 });
 

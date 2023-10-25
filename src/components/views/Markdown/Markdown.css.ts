@@ -2,6 +2,10 @@ import { style, globalStyle, StyleRule } from '@vanilla-extract/css';
 
 export const base = style({});
 
+globalStyle(`${base} > *:first-child`, {
+  marginTop: 0,
+});
+
 const headersBase: StyleRule = {
   color: '#333',
   margin: '2em 0 20px',
@@ -9,17 +13,17 @@ const headersBase: StyleRule = {
 
 globalStyle(`${base} h1`, {
   ...headersBase,
-  fontSize: 46,
+  fontSize: 32,
 });
 
 globalStyle(`${base} h2`, {
   ...headersBase,
-  fontSize: 32,
+  fontSize: 26,
 });
 
 globalStyle(`${base} h3`, {
   ...headersBase,
-  fontSize: 26,
+  fontSize: 20,
 });
 
 globalStyle(`${base} div, ${base} ul, ${base} p`, {
@@ -27,7 +31,8 @@ globalStyle(`${base} div, ${base} ul, ${base} p`, {
 });
 
 globalStyle(`${base} p`, {
-  lineHeight: '1.7',
+  lineHeight: 1.6,
+  whiteSpace: 'pre-wrap',
 });
 
 globalStyle(`${base} pre`, {
@@ -55,8 +60,9 @@ globalStyle(`${base} ul, ${base} ol`, {
 });
 
 globalStyle(`${base} li`, {
-  lineHeight: 1.5,
+  lineHeight: 1.4,
   listStyleType: 'disc',
+  marginTop: '0.25em',
 });
 
 globalStyle(`${base} li:first-child`, {
