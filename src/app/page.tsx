@@ -5,6 +5,7 @@ import Categories from '../components/views/organisms/Categories';
 import PostCards from '../components/views/organisms/PostCards';
 import { ALL_CATEGORIES_KEY, POST_LIST_API_END_POINT } from '../utils/constants';
 import { getCategoriesFromPosts } from '../utils/post';
+import { Main } from '@components/views/layouts/Main';
 
 interface Props {
   searchParams: {
@@ -31,7 +32,7 @@ export default async function Page({ searchParams }: Props) {
   const currentCategory = searchParams.c || categories[0];
 
   return (
-    <main>
+    <Main>
       <PageContent>
         <Categories categories={categories} />
       </PageContent>
@@ -40,6 +41,6 @@ export default async function Page({ searchParams }: Props) {
           posts={posts.filter(post => currentCategory === ALL_CATEGORIES_KEY || post.tags.includes(currentCategory))}
         />
       </PageContent>
-    </main>
+    </Main>
   );
 }

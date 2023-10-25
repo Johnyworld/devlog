@@ -6,6 +6,7 @@ import { removeExtension } from '@utils/stringUtils';
 import { parseBase64ToString } from '@utils/parseBase64ToString';
 import { EACH_POST_API_END_POINT } from '@utils/constants';
 import { getRoute } from '@utils/routes';
+import { Main } from '@components/views/layouts/Main';
 
 interface Props {
   params: {
@@ -27,7 +28,7 @@ export default async function Page({ params }: Props) {
   const markdownContent = parseBase64ToString(data.content);
 
   return (
-    <main>
+    <Main>
       <PageContent>
         <Markdown
           options={{
@@ -37,7 +38,7 @@ export default async function Page({ params }: Props) {
           {markdownContent}
         </Markdown>
       </PageContent>
-    </main>
+    </Main>
   );
 }
 
