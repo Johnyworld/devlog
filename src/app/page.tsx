@@ -3,7 +3,7 @@ import { Post } from 'type';
 import PageContent from '../components/views/layouts/PageContent';
 import Categories from '../components/views/organisms/Categories';
 import PostCards from '../components/views/organisms/PostCards';
-import { ALL_CATEGORIES_KEY } from '../utils/constants';
+import { ALL_CATEGORIES_KEY, POST_LIST_API_END_POINT } from '../utils/constants';
 import { getCategoriesFromPosts } from '../utils/post';
 
 interface Props {
@@ -13,7 +13,7 @@ interface Props {
 }
 
 async function getData() {
-  const res = await fetch('https://api.github.com/repos/johnyworld/dev-archive/contents/generatedList.json');
+  const res = await fetch(POST_LIST_API_END_POINT);
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }

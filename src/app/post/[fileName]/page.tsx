@@ -4,6 +4,8 @@ import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
 import Link from 'next/link';
 import { removeExtension } from '@utils/stringUtils';
 import { parseBase64ToString } from '@utils/parseBase64ToString';
+import { EACH_POST_API_END_POINT } from '@utils/constants';
+import { getRoute } from '@utils/routes';
 
 interface Props {
   params: {
@@ -12,7 +14,7 @@ interface Props {
 }
 
 async function getData(fileName: string) {
-  const res = await fetch(`https://api.github.com/repos/johnyworld/dev-archive/contents/vault/tech/${fileName}`);
+  const res = await fetch(`${EACH_POST_API_END_POINT}/${fileName}`);
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
@@ -43,7 +45,7 @@ const OverrideAnchorByLink = ({
   ...props
 }: DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) => {
   return (
-    <Link href={props.href != null ? removeExtension('/archive/' + props.href) : '/'} target={props.target}>
+    <Link href={props.href != null ? removeExtension(getRoute.post() + '/' + props.href) : '/'} target={props.target}>
       {props.children}
     </Link>
   );
