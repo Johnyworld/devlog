@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { ComponentProps } from 'react';
-import { base } from './NavigationMenuItem.module.scss';
+import cx from 'classnames';
+import { navigationMenuItem } from './NavigationMenuItem.module.scss';
 
 interface Props extends ComponentProps<typeof Link> {
   title: string;
@@ -9,7 +10,7 @@ interface Props extends ComponentProps<typeof Link> {
 
 export const NavigationMenuItem = ({ title, selected, ...linkProps }: Props) => {
   return (
-    <li className={base}>
+    <li className={cx(navigationMenuItem, { selected })}>
       <Link {...linkProps}>{title}</Link>
     </li>
   );

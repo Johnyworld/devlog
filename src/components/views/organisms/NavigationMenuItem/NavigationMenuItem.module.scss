@@ -1,11 +1,7 @@
-.base {
+.navigationMenuItem {
   font-size: 14px;
 
-  &.selected {
+  &[class~='selected'] {
     font-weight: 700;
-  }
-
-  a {
-    text-decoration: 'none';
   }
 }

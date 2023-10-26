@@ -1,12 +1,12 @@
 import { ReactNode } from 'react';
-import { base } from './PageContent.module.scss';
+import { pageContent } from './PageContent.module.scss';
 
 interface Props {
   children: ReactNode;
 }
 
 const PageContent = ({ children }: Props) => {
-  return <section className={base}>{children}</section>;
+  return <section className={pageContent}>{children}</section>;
 };
 
 export default PageContent;
