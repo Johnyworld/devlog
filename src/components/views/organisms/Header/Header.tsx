@@ -3,8 +3,8 @@
 import { usePathname } from 'next/navigation';
 import PageContent from '@components/views/layouts/PageContent';
 import { getRoute } from '@utils/routes';
-import { base } from './Header.css';
 import { NavigationMenu } from '../NavigationMenu';
+import { base } from './Header.module.scss';
 
 export const Header = () => {
   const pathname = usePathname();

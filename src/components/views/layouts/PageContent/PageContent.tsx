@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { base } from './PageContent.css';
+import { base } from './PageContent.module.scss';
 
 interface Props {
   children: ReactNode;

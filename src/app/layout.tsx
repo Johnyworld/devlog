@@ -1,5 +1,5 @@
 import { Header } from '@components/views/organisms/Header';
-import '@style/globalStyle.css';
+import '@style/index.scss';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

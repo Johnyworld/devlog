@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Post } from 'type';
-import { base } from './PostCardItem.css';
+import { base } from './PostCardItem.module.scss';
 
 interface Props {
   post: Post;

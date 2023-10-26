@@ -1,0 +1,11 @@
+.base {
+  font-size: 14px;
+
+  &.selected {
+    font-weight: 700;
+  }
+
+  a {
+    text-decoration: 'none';
+  }
+}

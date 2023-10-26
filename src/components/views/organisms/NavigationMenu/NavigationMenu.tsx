@@ -1,5 +1,5 @@
-import { base } from './NavigationMenu.css';
 import { NavigationMenuItem } from '../NavigationMenuItem';
+import { base } from './NavigationMenu.module.scss';
 
 interface NavigationMenu {
   id: string;
@@ -14,8 +14,8 @@ interface Props {
 
 export const NavigationMenu = ({ data, currentMenu }: Props) => {
   return (
-    <nav>
-      <ul className={base}>
+    <nav className={base}>
+      <ul>
         {data.map(item => (
           <NavigationMenuItem key={item.id} title={item.title} href={item.href} selected={currentMenu === item.id} />
         ))}

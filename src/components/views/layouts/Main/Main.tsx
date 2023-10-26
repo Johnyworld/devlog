@@ -1,5 +1,5 @@
 import { HTMLAttributes } from 'react';
-import { base } from './Main.css';
+import { base } from './Main.module.scss';
 
 interface Props extends HTMLAttributes<HTMLElement> {}
 
