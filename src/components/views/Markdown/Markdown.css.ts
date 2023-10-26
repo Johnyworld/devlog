@@ -23,7 +23,7 @@ globalStyle(`${base} h2`, {
 
 globalStyle(`${base} h3`, {
   ...headersBase,
-  fontSize: 20,
+  fontSize: 18,
 });
 
 globalStyle(`${base} div, ${base} ul, ${base} p`, {
