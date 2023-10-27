@@ -1,10 +1,10 @@
 import { parseBase64ToString } from '@utils/parseBase64ToString';
 import { Post } from 'type';
 import PageContent from '../components/views/layouts/PageContent';
-import Categories from '../components/views/organisms/Categories';
+// import Categories from '../components/views/organisms/Categories';
 import PostCards from '../components/views/organisms/PostCards';
 import { ALL_CATEGORIES_KEY, POST_LIST_API_END_POINT } from '../utils/constants';
-import { getCategoriesFromPosts } from '../utils/post';
+// import { getCategoriesFromPosts } from '../utils/post';
 import { Main } from '@components/views/layouts/Main';
 
 interface Props {
@@ -28,14 +28,14 @@ const parseBase64ToObject = (data: string) => {
 export default async function Page({ searchParams }: Props) {
   const data = await getData();
   const posts: Post[] = parseBase64ToObject(data.content);
-  const categories = getCategoriesFromPosts(posts);
-  const currentCategory = searchParams.c || categories[0];
+  // const categories = getCategoriesFromPosts(posts);
+  const currentCategory = searchParams.c || ALL_CATEGORIES_KEY;
 
   return (
     <Main>
-      <PageContent>
+      {/* <PageContent>
         <Categories categories={categories} />
-      </PageContent>
+      </PageContent> */}
       <PageContent>
         <PostCards
           posts={posts.filter(post => currentCategory === ALL_CATEGORIES_KEY || post.tags.includes(currentCategory))}
