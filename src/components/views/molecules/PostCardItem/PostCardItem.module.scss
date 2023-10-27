@@ -9,7 +9,14 @@
     background-color: $color-gray-weakest;
   }
 
+  .title {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
   .createdAt {
+    font-size: $font-regular;
     color: #9da2a5;
   }
 }

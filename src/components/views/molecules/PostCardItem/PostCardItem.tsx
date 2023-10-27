@@ -9,7 +9,7 @@ interface Props {
 const PostCardItem = ({ post }: Props) => {
   return (
     <div className={style.postCardItem}>
-      <h3>{post.title}</h3>
+      <h3 className={style.title}>{post.title}</h3>
       <p className={style.createdAt}>{format(new Date(post.createdAt), 'y. M. d.')}</p>
     </div>
   );
