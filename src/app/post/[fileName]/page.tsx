@@ -22,10 +22,12 @@ async function getData(fileName: string) {
   return res.json();
 }
 
+const regProperties = /^---([\s\S]*?)---/;
+
 export default async function Page({ params }: Props) {
   const fileName = decodeURI(params.fileName) + '.md';
   const data = await getData(fileName);
-  const markdownContent = parseBase64ToString(data.content);
+  const markdownContent = parseBase64ToString(data.content).replace(regProperties, '');
 
   return (
     <Main>
@@ -45,8 +47,20 @@ export default async function Page({ params }: Props) {
 const OverrideAnchorByLink = ({
   ...props
 }: DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) => {
+  if (!props.href) {
+    return <Link href='/'>{props.children}</Link>;
+  }
+
+  if (/https?:\/\//.test(props.href)) {
+    return (
+      <Link href={props.href} target='_blank'>
+        {props.children}
+      </Link>
+    );
+  }
+
   return (
-    <Link href={props.href != null ? removeExtension(getRoute.post() + '/' + props.href) : '/'} target={props.target}>
+    <Link href={removeExtension(getRoute.post() + '/' + props.href)} target={props.target}>
       {props.children}
     </Link>
   );

@@ -14,9 +14,9 @@ export const Header = () => {
     <header className={style.header}>
       <PageContent>
         <NavigationMenu
-          currentMenu={currentMenu || 'blog'}
+          currentMenu={currentMenu || 'post'}
           data={[
-            { id: 'blog', title: 'BLOG', href: getRoute.root() },
+            { id: 'post', title: 'BLOG', href: getRoute.root() },
             { id: 'work', title: 'WORK', href: getRoute.work() },
             { id: 'cv', title: 'CV', href: getRoute.cv() },
           ]}

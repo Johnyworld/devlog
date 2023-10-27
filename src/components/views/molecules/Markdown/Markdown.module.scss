@@ -25,7 +25,8 @@
 
   div,
   ul,
-  p {
+  p,
+  pre {
     margin: 18px 0;
   }
 
@@ -39,7 +40,6 @@
     overflow-x: auto;
     overflow-y: visible;
     padding: 20px;
-    margin: 18px -20px;
     border-radius: 4px;
 
     code {
@@ -48,7 +48,6 @@
   }
 
   code {
-    font-size: 16;
     background-color: $color-gray-weakest;
     padding: 2px 4px;
     border-radius: 4px;
@@ -76,6 +75,12 @@
     background-color: $color-gray-weakest;
     color: $color-gray-strong;
 
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
     strong {
       color: $color-gray-stronger;
     }
@@ -100,6 +105,7 @@
   }
 
   a {
+    color: $color-primary;
     :link,
     :visited {
       color: $color-primary;
