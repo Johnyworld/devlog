@@ -1,0 +1,5 @@
+.postCards {
+  & > *:not(:first-child) {
+    margin-top: 4px;
+  }
+}

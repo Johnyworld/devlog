@@ -1,7 +1,15 @@
-.postCardItem {
-  border: 1px solid;
+@import '@style/variables';
 
-  :hover {
-    background-color: antiquewhite;
+.postCardItem {
+  border-radius: 8px;
+  padding: 6px 12px;
+  margin: 0 -12px;
+
+  &:hover {
+    background-color: $color-gray-weakest;
+  }
+
+  .createdAt {
+    color: #9da2a5;
   }
 }
