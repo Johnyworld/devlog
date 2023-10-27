@@ -6,5 +6,5 @@ interface Theme {
 }
 
 export const theme: Theme = {
-  color: variables as ThemeColor,
+  color: variables,
 };

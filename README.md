@@ -28,13 +28,13 @@ https://johnykim.me 로 구경 오세요.
 
 - `src/style/theme.scss` 에 <테마 값> 추가/수정.
 - scss 변수로 사용하기 위해 `src/style/_variables.scss` 파일에 <테마 값> 변수 지정.
-- `.tsx?` 파일에서도 사용하기 위해 `src/style/theme.{color}.module.scss` 에서 <테마 값> 내보내고, `src/types/theme.d.ts` 에 타입 정의.
+- `.tsx?` 파일에서도 사용하기 위해 `src/style/theme.{color}.module.scss` 에서 <테마 값> 내보내고, `src/style/theme.{color}.module.scss.d.ts` 에 타입 정의.
 
 #### <테마 분류> 추가/수정하기
 
 - `src/style/theme.scss` 에 <테마 분류> 추가/수정, 추가하는 경우 필요에 따라 `@each`문 돌리기.
 - scss 변수로 사용하기 위해 `src/style/_variables.scss` 파일 수정.
-- `src/style/theme.{새로운 테마 분류}.module.scss` 파일 생성하고 `src/types/theme.d.ts` 에 타입 정의.
+- `src/style/theme.{새로운 테마 분류}.module.scss` 파일 생성하고 `src/style/theme.{color}.module.scss.d.ts` 에 타입 정의.
 - `src/style/theme.ts` 파일도 추가/수정.
 
 #### <테마> 추가하기
