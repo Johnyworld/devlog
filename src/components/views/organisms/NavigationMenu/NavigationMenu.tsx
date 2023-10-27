@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { NavigationMenuItem } from '../NavigationMenuItem';
 import style from './NavigationMenu.module.scss';
 
@@ -17,7 +18,11 @@ export const NavigationMenu = ({ data, currentMenu }: Props) => {
     <nav className={style.navigationMenu}>
       <ul>
         {data.map(item => (
-          <NavigationMenuItem key={item.id} title={item.title} href={item.href} selected={currentMenu === item.id} />
+          <li key={item.id}>
+            <Link href={item.href}>
+              <NavigationMenuItem title={item.title} selected={currentMenu === item.id} />
+            </Link>
+          </li>
         ))}
       </ul>
     </nav>
