@@ -1,5 +1,5 @@
 import PageContent from '@components/views/layouts/PageContent';
-import Markdown from '@components/views/Markdown';
+import Markdown from '@components/views/molecules/Markdown';
 import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
 import Link from 'next/link';
 import { removeExtension } from '@utils/stringUtils';
