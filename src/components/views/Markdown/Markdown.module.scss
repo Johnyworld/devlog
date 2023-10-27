@@ -1,3 +1,5 @@
+@import '@style/variables';
+
 .markdown {
   > *:first-child {
     margin-top: 0;
@@ -6,7 +8,7 @@
   h1,
   h2,
   h3 {
-    color: #333;
+    color: $color-letter-strong;
     margin: 2em 0 20px;
   }
 
@@ -34,7 +36,7 @@
   }
 
   pre {
-    background-color: #ecf1f2;
+    background-color: $color-gray-weakest;
     overflow-x: auto;
     overflow-y: visible;
     padding: 20px;
@@ -48,7 +50,7 @@
 
   code {
     font-size: 16;
-    background-color: #ecf1f2;
+    background-color: $color-gray-weakest;
     padding: 2px 4px;
     border-radius: 4px;
   }
@@ -71,9 +73,13 @@
   blockquote {
     margin: 0;
     padding: 12px 15px;
-    border-left: 3px solid #ddd;
-    background-color: #f8f9f9;
-    color: #858c97;
+    border-left: 3px solid $color-gray-weaker;
+    background-color: $color-gray-weakest;
+    color: $color-gray-strong;
+
+    strong {
+      color: $color-gray-stronger;
+    }
 
     > *:first-child {
       margin-top: 0;
@@ -90,14 +96,14 @@
 
   hr {
     margin: 50px 0;
-    border: 1px solid #dddfe4;
+    border: 1px solid $color-gray-weaker;
     border-bottom: 0;
   }
 
   a {
     :link,
     :visited {
-      color: #3e778c;
+      color: $color-primary;
     }
   }
 }

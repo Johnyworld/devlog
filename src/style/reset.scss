@@ -1,7 +1,9 @@
+@import '@style/variables';
+
 body {
   font-family: sans-serif;
   font-weight: 400;
-  color: #5a5a5a;
+  color: $color-letter;
 }
 
 body,
@@ -25,11 +27,12 @@ li {
 
 strong {
   font-weight: 700;
-  color: #333;
+  color: $color-letter-strong;
 }
 
 a {
   color: unset;
+  text-decoration: none;
 }
 
 .tag {
