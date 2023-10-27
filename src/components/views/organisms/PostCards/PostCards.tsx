@@ -1,7 +1,7 @@
 import { Post } from 'type';
 import PostCardItem from '../../molecules/PostCardItem/PostCardItem';
 import Link from 'next/link';
-import { postCards } from './PostCards.module.scss';
+import style from './PostCards.module.scss';
 
 interface Props {
   posts: Post[];
@@ -9,7 +9,7 @@ interface Props {
 
 const PostCards = ({ posts }: Props) => {
   return (
-    <ul className={postCards}>
+    <ul className={style.postCards}>
       {posts.map(post => {
         return (
           <li key={post.title}>

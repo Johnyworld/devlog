@@ -4,14 +4,14 @@ import { usePathname } from 'next/navigation';
 import PageContent from '@components/views/layouts/PageContent';
 import { getRoute } from '@utils/routes';
 import { NavigationMenu } from '../NavigationMenu';
-import { header } from './Header.module.scss';
+import style from './Header.module.scss';
 
 export const Header = () => {
   const pathname = usePathname();
   const currentMenu = pathname.split('/')[1];
 
   return (
-    <header className={header}>
+    <header className={style.header}>
       <PageContent>
         <NavigationMenu
           currentMenu={currentMenu || 'blog'}

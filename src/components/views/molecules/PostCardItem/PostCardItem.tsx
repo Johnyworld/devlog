@@ -1,5 +1,5 @@
 import { Post } from 'type';
-import { postCardItem, createdAt } from './PostCardItem.module.scss';
+import style from './PostCardItem.module.scss';
 
 interface Props {
   post: Post;
@@ -7,9 +7,9 @@ interface Props {
 
 const PostCardItem = ({ post }: Props) => {
   return (
-    <div className={postCardItem}>
+    <div className={style.postCardItem}>
       <h3>{post.title}</h3>
-      <p className={createdAt}>{post.createdAt}</p>
+      <p className={style.createdAt}>{post.createdAt}</p>
     </div>
   );
 };
