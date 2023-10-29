@@ -1,12 +1,15 @@
 @import '@style/variables';
+@import '@style/mixins';
 
 .navigationMenuItem {
   font-size: 14px;
   padding: 4px 8px;
   border-radius: 4px;
 
-  &:hover {
-    background-color: $color-gray-weakest;
+  @include isHoverableDivice() {
+    &:hover {
+      background-color: $color-gray-weakest;
+    }
   }
 
   &[class~='selected'] {
