@@ -1,0 +1,13 @@
+@import '@style/variables';
+
+.postTitle {
+  .postTitle_title {
+    font-size: 36px;
+    margin-bottom: 8px;
+  }
+
+  .postTitle_description {
+    font-size: $font-regular;
+    color: $color-gray-strong;
+  }
+}
