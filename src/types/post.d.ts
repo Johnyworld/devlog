@@ -8,5 +8,6 @@ declare module 'type' {
     path: PostPath;
     tags: string[];
     createdAt: ISODatePart;
+    modifiedAt: ISOString;
   }
 }
