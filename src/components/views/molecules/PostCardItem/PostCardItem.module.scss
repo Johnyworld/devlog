@@ -12,13 +12,14 @@
     }
   }
 
-  .title {
+  .postCardItem_title {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin-bottom: 2px;
   }
 
-  .createdAt {
+  .postCardItem_createdAt {
     font-size: $font-regular;
     color: #9da2a5;
   }
