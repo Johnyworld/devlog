@@ -1,6 +1,8 @@
 import { DOMAIN_URL } from '@utils/constants';
 import { MetadataRoute } from 'next';
 import { getPostList } from 'src/calls/getPostList';
+import { getProjects } from 'src/calls/getProjects';
+import { getToyProjects } from 'src/calls/getToyProjects';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const posts = await getPostList();
@@ -11,9 +13,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }));
 
   const postsMap = posts.map(post => ({
-    url: `${DOMAIN_URL}/post/${post.title}.md`,
+    url: `${DOMAIN_URL}/post/${post.title}`,
     lastModified: post.modifiedAt,
   }));
 
-  return [...routes, ...postsMap];
+  const projects = getProjects();
+  const toyProjects = getToyProjects();
+  const projectsMap = [...projects, ...toyProjects].map(project => ({
+    url: `${DOMAIN_URL}/work/${project.id}`,
+    lastModified: new Date(),
+  }));
+
+  return [...routes, ...postsMap, ...projectsMap];
 }
