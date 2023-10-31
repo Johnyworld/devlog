@@ -1,0 +1,28 @@
+@import '@style/variables';
+
+.workTitle {
+  > *:not(:first-child) {
+    margin-top: 16px;
+  }
+
+  .workTitle_createdAt {
+    font-size: $font-regular;
+    color: $color-gray;
+    margin-top: 2px;
+  }
+
+  .workTitle_description {
+    line-height: 1.4;
+    // color: $color-gray-strong;
+  }
+
+  .workTitle_link {
+    &:not(:first-child) {
+      margin-top: 4px;
+    }
+
+    a {
+      color: $color-primary;
+    }
+  }
+}
