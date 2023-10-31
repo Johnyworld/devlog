@@ -6,6 +6,7 @@ declare module 'type' {
     bg: string;
     grayStronger: string;
     grayStrong: string;
+    gray: string;
     grayWeaker: string;
     grayWeakest: string;
   }
