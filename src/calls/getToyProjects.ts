@@ -3,7 +3,16 @@ import { Work } from 'type';
 export const getToyProjects = (): Work[] => {
   return [
     {
-      id: 'mordern_pirates',
+      id: 'react-ui-playground',
+      title: 'React UI Playground',
+      description: 'UI 연습 놀이터.',
+      createdAt: '2022-04-01',
+      thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/react-drag-thumb-1-min.png',
+      github: 'https://github.com/Johnyworld/react-ui-playground',
+      href: 'https://johnyworld.github.io/react-ui-playground/#/',
+    },
+    {
+      id: 'mordern-pirates',
       title: 'Modern Pirates',
       description: '포트리스류 게임.',
       createdAt: '2019-05-19',
@@ -20,7 +29,7 @@ export const getToyProjects = (): Work[] => {
       github: 'https://github.com/Johnyworld/conv250',
     },
     {
-      id: 'rpg_moving',
+      id: 'rpg-moving',
       title: 'RPG Moving',
       description: '캐릭터 이동 시뮬레이터. 방향 키보드를 눌러보세요.',
       createdAt: '2019-03-30',
@@ -46,7 +55,7 @@ export const getToyProjects = (): Work[] => {
       github: 'https://github.com/Johnyworld/dowcrossroad',
     },
     {
-      id: 'bang_card_picker',
+      id: 'bang-card-picker',
       title: 'Bang card picker',
       description: '보드게임 <뱅> 플레이를 돕기 위한 애드온.',
       createdAt: '2018-06-12',
