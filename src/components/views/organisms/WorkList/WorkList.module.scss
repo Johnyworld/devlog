@@ -1,0 +1,11 @@
+.workList {
+  .workList_title {
+    margin-bottom: 1em;
+  }
+
+  .workList_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+}
