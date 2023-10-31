@@ -11,6 +11,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='en'>
       <head>
         <title>Johny Kim</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
 
         {/* naver 검색엔진 확인 */}
         <meta name='naver-site-verification' content='ebb0335cc1fb0aeadb38243f2293b50556fc0319' />
