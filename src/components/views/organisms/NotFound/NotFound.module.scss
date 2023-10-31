@@ -1,0 +1,16 @@
+@import '@style/variables';
+
+.notFound {
+  > *:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .notFound_title {
+    font-size: 70px;
+    font-weight: $font-thin;
+  }
+
+  a {
+    color: $color-primary;
+  }
+}

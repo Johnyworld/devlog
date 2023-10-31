@@ -9,6 +9,7 @@ import { getRoute } from '@utils/routes';
 import { Main } from '@components/views/layouts/Main';
 import { Divider } from '@components/views/atoms/Divider';
 import { PostTitle } from '@components/views/organisms/PostTitle';
+import { NotFound } from '@components/views/organisms/NotFound';
 
 interface Props {
   params: {
@@ -29,32 +30,42 @@ const regCreatedAt = /(?<=Created: ("|))([\d]{4}-[\d]{2}-[\d]{2})/;
 const regTags = /(?<=- )([\s\S]*?)(?=\n)/g;
 
 export default async function Page({ params }: Props) {
-  const postTitle = decodeURI(params.fileName);
-  const fileName = postTitle + '.md';
-  const data = await getData(fileName);
-  const markdownContent = parseBase64ToString(data.content);
-  const content = markdownContent.replace(regProperties, '');
-  const properties = getProperties(markdownContent);
+  try {
+    const postTitle = decodeURI(params.fileName);
+    const fileName = postTitle + '.md';
+    const data = await getData(fileName);
+    const markdownContent = parseBase64ToString(data.content);
+    const content = markdownContent.replace(regProperties, '');
+    const properties = getProperties(markdownContent);
 
-  return (
-    <Main>
-      <PageContent>
-        <PostTitle title={postTitle} createdAt={properties?.createdAt ?? ''} tags={properties?.tags ?? []} />
-      </PageContent>
+    return (
+      <Main>
+        <PageContent>
+          <PostTitle title={postTitle} createdAt={properties?.createdAt ?? ''} tags={properties?.tags ?? []} />
+        </PageContent>
 
-      <Divider />
+        <Divider />
 
-      <PageContent>
-        <Markdown
-          options={{
-            overrides: { a: OverrideAnchorByLink },
-          }}
-        >
-          {content}
-        </Markdown>
-      </PageContent>
-    </Main>
-  );
+        <PageContent>
+          <Markdown
+            options={{
+              overrides: { a: OverrideAnchorByLink },
+            }}
+          >
+            {content}
+          </Markdown>
+        </PageContent>
+      </Main>
+    );
+  } catch {
+    return (
+      <Main>
+        <PageContent>
+          <NotFound />
+        </PageContent>
+      </Main>
+    );
+  }
 }
 
 const OverrideAnchorByLink = ({
