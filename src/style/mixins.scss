@@ -1,5 +1,31 @@
+@import '@style/variables';
+
 @mixin isHoverableDivice {
   @media (hover: hover) and (pointer: fine) {
+    @content;
+  }
+}
+
+@mixin isMobileOrLessWidth {
+  @media screen and (max-width: #{$bp-1 - 1px}) {
+    @content;
+  }
+}
+
+@mixin isTabletOrLessWidth {
+  @media screen and (max-width: #{$bp-2 - 1px}) {
+    @content;
+  }
+}
+
+@mixin isTabletOrMoreWidth {
+  @media screen and (min-width: $bp-1) {
+    @content;
+  }
+}
+
+@mixin isDesktopOrMoreWidth {
+  @media screen and (min-width: $bp-2) {
     @content;
   }
 }

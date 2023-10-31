@@ -1,4 +1,5 @@
 @import '@style/variables';
+@import '@style/mixins';
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard.css');
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
@@ -41,6 +42,20 @@ h2 {
 
 h3 {
   font-size: 18px;
+}
+
+@include isMobileOrLessWidth() {
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
 }
 
 h1,

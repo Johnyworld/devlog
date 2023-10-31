@@ -1,5 +1,11 @@
+@import '@style/mixins';
+
 .divider {
   height: 1px;
   background-color: #f3f3f6;
   margin: 40px 0;
+
+  @include isMobileOrLessWidth() {
+    margin: 30px 20px;
+  }
 }
