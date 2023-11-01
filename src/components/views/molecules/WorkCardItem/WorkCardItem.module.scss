@@ -1,12 +1,36 @@
 @import '@style/variables';
+@import '@style/mixins';
 
 .workCardItem {
   .workCardItem_thumbnail {
-    width: 100%;
-    aspect-ratio: 16/9;
-    object-fit: cover;
+    position: relative;
+    display: flex;
+    img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 4px;
+      filter: contrast(0.9);
+    }
+  }
+  .workCardItem_imageTag {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    padding: 2px 4px;
     border-radius: 4px;
-    filter: contrast(0.9);
+    font-size: $font-small;
+    box-shadow: 0 0 2px;
+    background-color: #222;
+    color: #c7c7c7;
+
+    &[class~='isLive'] {
+      color: #47ffc2;
+    }
+
+    @include isMobileOrLessWidth() {
+      font-size: $font-tiny;
+    }
   }
   .workCardItem_meta {
     font-size: $font-regular;
