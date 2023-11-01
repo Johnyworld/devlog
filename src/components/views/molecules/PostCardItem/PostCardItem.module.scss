@@ -13,6 +13,7 @@
   }
 
   .postCardItem_title {
+    font-size: 18px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -20,7 +21,7 @@
   }
 
   .postCardItem_createdAt {
-    font-size: $font-regular;
+    font-size: $font-small;
     color: $color-gray;
   }
 }

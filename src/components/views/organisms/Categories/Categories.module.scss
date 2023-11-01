@@ -7,7 +7,7 @@
   gap: 4px 8px;
 
   .categories_tag {
-    font-size: $font-regular;
+    font-size: $font-small;
     color: $color-primary;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
   }
 
   .categories_count {
-    font-size: $font-small;
+    font-size: $font-tiny;
     color: $color-gray;
   }
 }
