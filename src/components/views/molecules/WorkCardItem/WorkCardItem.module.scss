@@ -2,6 +2,9 @@
 @import '@style/mixins';
 
 .workCardItem {
+  > *:not(:first-child) {
+    margin-top: 6px;
+  }
   .workCardItem_thumbnail {
     position: relative;
     display: flex;
@@ -39,6 +42,5 @@
   }
   .workCardItem_description {
     line-height: 1.4;
-    margin-top: 4px;
   }
 }
