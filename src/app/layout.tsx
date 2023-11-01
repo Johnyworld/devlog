@@ -26,6 +26,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property='og:description' content={description} />
         <meta property='og:keywords' content={keywords} />
         <meta property='og:site_name' content={siteName} />
+
+        {/* Fonts */}
+        <link
+          rel='stylesheet'
+          type='text/css'
+          href='https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css'
+        />
+        <link href='https://fonts.googleapis.com/css2?family=Inconsolata&display=swap' rel='stylesheet' />
       </head>
       <body>
         <Suspense>
