@@ -1,5 +1,7 @@
+import Analytics from '@components/containers/Analytics';
 import { Header } from '@components/views/organisms/Header';
 import '@style/index.scss';
+import { Suspense } from 'react';
 
 const siteName = 'JohnyKimBlog';
 const title = 'Johny Kim Blog';
@@ -26,6 +28,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property='og:site_name' content={siteName} />
       </head>
       <body>
+        <Suspense>
+          <Analytics />
+        </Suspense>
         <Header />
         {children}
       </body>
