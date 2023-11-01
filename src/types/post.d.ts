@@ -10,4 +10,6 @@ declare module 'type' {
     createdAt: ISODatePart;
     modifiedAt: ISOString;
   }
+
+  type PostCategories = Record<string, number>;
 }

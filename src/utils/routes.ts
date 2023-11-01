@@ -2,6 +2,9 @@ export const getRoute = {
   root: () => {
     return `/`;
   },
+  rootCategoryQueryString: (category: string) => {
+    return `/?c=${category}`;
+  },
   post: () => {
     return `/post`;
   },

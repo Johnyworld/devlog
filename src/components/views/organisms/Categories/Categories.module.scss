@@ -1,0 +1,25 @@
+@import '@style/variables';
+
+.categories {
+  display: flex;
+  align-items: center;
+  flex-flow: wrap;
+  gap: 4px 8px;
+
+  .categories_tag {
+    font-size: $font-regular;
+    color: $color-primary;
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    &[class~='selected'] {
+      font-weight: $font-bold;
+    }
+  }
+
+  .categories_count {
+    font-size: $font-small;
+    color: $color-gray;
+  }
+}

@@ -1,13 +1,14 @@
-import { Post } from "type";
+import { Post, PostCategories } from 'type';
 
-export const getCategoriesFromPosts = (posts: Post[]): string[] => {
-  const results: string[] = [];
-  posts.forEach((post) => {
-    post.tags.forEach((tag) => {
-      if (results.includes(tag)) {
+export const getCategoriesFromPosts = (posts: Post[]): PostCategories => {
+  const results: PostCategories = {};
+  posts.forEach(post => {
+    post.tags.forEach(tag => {
+      if (results[tag] !== undefined) {
+        results[tag] += 1;
         return;
       } else {
-        results.push(tag);
+        results[tag] = 1;
       }
     });
   });

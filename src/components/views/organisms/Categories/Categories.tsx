@@ -1,26 +1,40 @@
-'use client';
-
-import { ALL_CATEGORIES_KEY } from '../../../../utils/constants';
+import { getCategoriesFromPosts } from '@utils/post';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { Post } from 'type';
+import style from './Categories.module.scss';
+import { getRoute } from '@utils/routes';
+import classNames from 'classnames';
+import { ALL_CATEGORIES_KEY } from '@utils/constants';
 
 interface Props {
-  categories: string[];
+  posts: Post[];
+  currentCategory: string;
 }
 
-const Categories = ({ categories }: Props) => {
-  const pathname = usePathname();
+const Categories = ({ posts, currentCategory }: Props) => {
+  const categories = getCategoriesFromPosts(posts);
+
   return (
-    <ul>
-      <li key={ALL_CATEGORIES_KEY}>
-        <Link href={`${pathname}?c=${ALL_CATEGORIES_KEY}`}>All</Link>
-      </li>
-      {categories.map(category => (
-        <li key={category}>
-          <Link href={`${pathname}?c=${category}`}>{category}</Link>
-        </li>
+    <div className={style.categories}>
+      <Link
+        href={getRoute.root()}
+        className={classNames(style.categories_tag, { selected: currentCategory === ALL_CATEGORIES_KEY })}
+      >
+        <span>#All</span>
+        <span className={style.categories_count}>{posts.length}</span>
+      </Link>
+
+      {Object.entries(categories).map(([category, count]) => (
+        <Link
+          key={category}
+          href={getRoute.rootCategoryQueryString(category)}
+          className={classNames(style.categories_tag, { selected: currentCategory === category })}
+        >
+          <span>#{category}</span>
+          <span className={style.categories_count}>{count}</span>
+        </Link>
       ))}
-    </ul>
+    </div>
   );
 };
 
