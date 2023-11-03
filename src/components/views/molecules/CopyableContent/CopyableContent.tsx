@@ -37,8 +37,16 @@ export const CopyableContent = ({ text, children, ...restProps }: Props) => {
           <span className={classNames(style.copyableContent_box, { hoverable: true })}>
             <span className={classNames(style.copyableContent_button, { clickable: true })}>
               <svg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
-                <rect x='2' y='4' width='12' stroke='var(--color-gray)' height='12' strokeWidth='2' />
-                <path d='M5 1H17V13' stroke='var(--color-gray)' strokeWidth='2' />
+                <rect
+                  className='regularStroke'
+                  x='2'
+                  y='4'
+                  width='12'
+                  stroke='var(--color-gray)'
+                  height='12'
+                  strokeWidth='2'
+                />
+                <path className='regularStroke' d='M5 1H17V13' stroke='var(--color-gray)' strokeWidth='2' />
               </svg>
             </span>
           </span>
