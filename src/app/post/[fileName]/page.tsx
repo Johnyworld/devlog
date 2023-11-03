@@ -1,11 +1,7 @@
 import PageContent from '@components/views/layouts/PageContent';
 import Markdown from '@components/views/molecules/Markdown';
-import { AnchorHTMLAttributes, DetailedHTMLProps } from 'react';
-import Link from 'next/link';
-import { removeExtension } from '@utils/stringUtils';
 import { parseBase64ToString } from '@utils/parseBase64ToString';
 import { EACH_POST_API_END_POINT } from '@utils/constants';
-import { getRoute } from '@utils/routes';
 import { Main } from '@components/views/layouts/Main';
 import { Divider } from '@components/views/atoms/Divider';
 import { PostTitle } from '@components/views/organisms/PostTitle';
@@ -47,13 +43,7 @@ export default async function Page({ params }: Props) {
         <Divider />
 
         <PageContent>
-          <Markdown
-            options={{
-              overrides: { a: OverrideAnchorByLink },
-            }}
-          >
-            {content}
-          </Markdown>
+          <Markdown>{content}</Markdown>
         </PageContent>
       </Main>
     );
@@ -67,28 +57,6 @@ export default async function Page({ params }: Props) {
     );
   }
 }
-
-const OverrideAnchorByLink = ({
-  ...props
-}: DetailedHTMLProps<AnchorHTMLAttributes<HTMLAnchorElement>, HTMLAnchorElement>) => {
-  if (!props.href) {
-    return <Link href='/'>{props.children}</Link>;
-  }
-
-  if (/https?:\/\//.test(props.href)) {
-    return (
-      <Link href={props.href} target='_blank'>
-        {props.children}
-      </Link>
-    );
-  }
-
-  return (
-    <Link href={removeExtension(getRoute.post() + '/' + props.href)} target={props.target}>
-      {props.children}
-    </Link>
-  );
-};
 
 const getProperties = (fileContent: string) => {
   const propertiesPart = fileContent.match(regProperties)?.[0];
