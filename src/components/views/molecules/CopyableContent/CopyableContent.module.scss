@@ -1,44 +1,49 @@
 @import '@style/variables';
+@import '@style/mixins';
 
 .copyableContent {
   position: relative;
   cursor: pointer;
 
-  .copyableContent_box {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: -40px;
-    width: 40px;
-    height: 32px;
-
-    &[class~='hoverable'] {
-      display: none;
+  @include isTabletOrLessWidth() {
+    .copyableContent_box {
+      margin-left: 8px;
     }
   }
 
-  &:hover .copyableContent_box[class~='hoverable'] {
-    display: block;
-  }
+  @include isDesktopOrMoreWidth() {
+    .copyableContent_box {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: -40px;
+      width: 40px;
+      height: 32px;
 
-  .copyableContent_button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 32px;
-    height: 32px;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &[class~='clickable']:hover {
-      background-color: $color-gray-weakest;
+      &[class~='hoverable'] {
+        display: none;
+      }
     }
 
-    .copyableContent_icon {
-      stroke: $color-gray;
+    &:hover .copyableContent_box[class~='hoverable'] {
+      display: inline;
+    }
+
+    .copyableContent_button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &[class~='clickable']:hover {
+        background-color: $color-gray-weakest;
+      }
     }
   }
 }
