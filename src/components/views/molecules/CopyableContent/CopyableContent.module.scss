@@ -6,15 +6,18 @@
   cursor: pointer;
 
   @include isTabletOrLessWidth() {
+    $icon-size: 14px;
+
     .copyableContent_box {
-      margin-left: 4px;
+      position: absolute;
+      right: #{- $icon-size - 4px};
+      transform: translateY(-12%);
     }
 
     .copyableContent_button {
       svg {
-        width: 14px;
-        height: 14px;
-        vertical-align: super;
+        width: $icon-size;
+        height: $icon-size;
         [class~='regularStroke'] {
           stroke: $color-gray-weaker;
         }
@@ -23,13 +26,15 @@
   }
 
   @include isDesktopOrMoreWidth() {
+    $button-size: 32px;
+
     .copyableContent_box {
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      left: -40px;
-      width: 40px;
-      height: 32px;
+      left: #{-$button-size - 4px};
+      width: #{$button-size + 4px};
+      height: $button-size;
 
       &[class~='hoverable'] {
         display: none;
@@ -41,12 +46,8 @@
     }
 
     .copyableContent_button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      left: 0;
-      width: 32px;
-      height: 32px;
+      width: $button-size;
+      height: $button-size;
       border-radius: 8px;
       display: flex;
       justify-content: center;
