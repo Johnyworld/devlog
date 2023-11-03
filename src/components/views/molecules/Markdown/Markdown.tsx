@@ -13,7 +13,7 @@ interface Props {
 
 const Markdown = ({ children, options }: Props) => {
   const pathname = usePathname();
-  const basePath = window.location.origin + pathname;
+  const basePath = typeof window !== 'undefined' ? window.location.origin + pathname : '';
 
   return (
     <MarkdownToJSX
