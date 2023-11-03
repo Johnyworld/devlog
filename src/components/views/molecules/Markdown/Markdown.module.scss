@@ -9,6 +9,15 @@
   h2,
   h3 {
     margin: 2em 0 20px;
+
+    /** hash links offset */
+    &:before {
+      content: '';
+      display: block;
+      height: calc(2em + $header-height);
+      margin-top: calc(-2em - $header-height);
+      visibility: hidden;
+    }
   }
 
   > div,
