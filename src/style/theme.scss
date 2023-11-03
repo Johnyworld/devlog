@@ -1,3 +1,5 @@
+@import '@style/mixins';
+
 $light-theme: (
   primary: #3e778c,
   letter-strong: #333,
@@ -28,6 +30,11 @@ $font-weights: (
 );
 
 :root {
+  --header-height: 42px;
+  @include isMobileOrLessWidth {
+    --header-height: 48px;
+  }
+
   @each $key, $value in $light-theme {
     #{"--color-" + $key}: #{$value};
   }

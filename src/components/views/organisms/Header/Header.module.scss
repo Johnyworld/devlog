@@ -5,9 +5,14 @@
   position: sticky;
   top: 0;
   background: rgba(255, 255, 255, 0.8);
-  padding: 8px 0;
   z-index: 1;
   backdrop-filter: blur(5px);
+
+  nav {
+    height: $header-height;
+    display: flex;
+    align-items: center;
+  }
 
   &.scrolled {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05);

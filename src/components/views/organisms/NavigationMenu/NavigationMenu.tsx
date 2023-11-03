@@ -15,16 +15,14 @@ interface Props {
 
 export const NavigationMenu = ({ data, currentMenu }: Props) => {
   return (
-    <nav className={style.navigationMenu}>
-      <ul>
-        {data.map(item => (
-          <li key={item.id}>
-            <Link href={item.href}>
-              <NavigationMenuItem title={item.title} selected={currentMenu === item.id} />
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </nav>
+    <ul className={style.navigationMenu}>
+      {data.map(item => (
+        <li key={item.id}>
+          <Link href={item.href}>
+            <NavigationMenuItem title={item.title} selected={currentMenu === item.id} />
+          </Link>
+        </li>
+      ))}
+    </ul>
   );
 };

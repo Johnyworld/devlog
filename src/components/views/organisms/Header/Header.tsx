@@ -13,14 +13,16 @@ export const Header = () => {
   return (
     <header className={style.header}>
       <PageContent>
-        <NavigationMenu
-          currentMenu={currentMenu || 'post'}
-          data={[
-            { id: 'post', title: 'BLOG', href: getRoute.root() },
-            { id: 'work', title: 'WORK', href: getRoute.work() },
-            { id: 'cv', title: 'CV', href: getRoute.cv() },
-          ]}
-        />
+        <nav>
+          <NavigationMenu
+            currentMenu={currentMenu || 'post'}
+            data={[
+              { id: 'post', title: 'BLOG', href: getRoute.root() },
+              { id: 'work', title: 'WORK', href: getRoute.work() },
+              { id: 'cv', title: 'CV', href: getRoute.cv() },
+            ]}
+          />
+        </nav>
       </PageContent>
     </header>
   );
