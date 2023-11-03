@@ -27,7 +27,7 @@ const regTags = /(?<=- )([\s\S]*?)(?=\n)/g;
 
 export default async function Page({ params }: Props) {
   try {
-    const postTitle = decodeURI(params.fileName);
+    const postTitle = decodeURIComponent(params.fileName);
     const fileName = postTitle + '.md';
     const data = await getData(fileName);
     const markdownContent = parseBase64ToString(data.content);
