@@ -16,7 +16,9 @@ interface Props {
 }
 
 async function getData(fileName: string) {
-  const res = await fetch(`${EACH_WORK_API_END_POINT}/${fileName}`);
+  const res = await fetch(`${EACH_WORK_API_END_POINT}/${fileName}`, {
+    headers: { Authorization: process.env.NEXT_PUBLIC_GITHUB_AUTH ?? '' },
+  });
   if (!res.ok) {
     throw new Error('Work 데이터를 불러오는데 실패했습니다.');
   }

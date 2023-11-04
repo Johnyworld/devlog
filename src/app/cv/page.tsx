@@ -5,7 +5,9 @@ import { parseBase64ToString } from '@utils/parseBase64ToString';
 import { Main } from '@components/views/layouts/Main';
 
 async function getData() {
-  const res = await fetch(CV_FILE_API_END_POINT);
+  const res = await fetch(CV_FILE_API_END_POINT, {
+    headers: { Authorization: process.env.NEXT_PUBLIC_GITHUB_AUTH ?? '' },
+  });
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }

@@ -8,7 +8,9 @@ export const getPostList = async (): Promise<Post[]> => {
 };
 
 const getJson = async () => {
-  const res = await fetch(POST_LIST_API_END_POINT);
+  const res = await fetch(POST_LIST_API_END_POINT, {
+    headers: { Authorization: process.env.NEXT_PUBLIC_GITHUB_AUTH ?? '' },
+  });
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
