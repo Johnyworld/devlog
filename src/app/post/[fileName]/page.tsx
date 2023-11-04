@@ -16,7 +16,7 @@ interface Props {
 async function getData(fileName: string) {
   const res = await fetch(`${EACH_POST_API_END_POINT}/${fileName}`);
   if (!res.ok) {
-    throw new Error('Failed to fetch data');
+    throw new Error('Post 데이터를 불러오는데 실패했습니다.');
   }
   return res.json();
 }
