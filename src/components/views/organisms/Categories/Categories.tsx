@@ -24,16 +24,18 @@ const Categories = ({ posts, currentCategory }: Props) => {
         <span className={style.categories_count}>{posts.length}</span>
       </Link>
 
-      {Object.entries(categories).map(([category, count]) => (
-        <Link
-          key={category}
-          href={getRoute.rootCategoryQueryString(category)}
-          className={classNames(style.categories_tag, { selected: currentCategory === category })}
-        >
-          <span>#{category}</span>
-          <span className={style.categories_count}>{count}</span>
-        </Link>
-      ))}
+      {Object.entries(categories)
+        .sort((a, b) => b[1] - a[1])
+        .map(([category, count]) => (
+          <Link
+            key={category}
+            href={getRoute.rootCategoryQueryString(category)}
+            className={classNames(style.categories_tag, { selected: currentCategory === category })}
+          >
+            <span>#{category}</span>
+            <span className={style.categories_count}>{count}</span>
+          </Link>
+        ))}
     </div>
   );
 };
