@@ -60,7 +60,7 @@ const pageview = (url: string) => {
       page: url,
     });
   } else {
-    console.log({
+    console.info({
       event: 'pageview',
       page: url,
     });
