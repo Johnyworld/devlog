@@ -6,6 +6,7 @@ import { Main } from '@components/views/layouts/Main';
 import { Divider } from '@components/views/atoms/Divider';
 import { PostTitle } from '@components/views/organisms/PostTitle';
 import { NotFound } from '@components/views/organisms/NotFound';
+import { MarkdownTOC } from '@components/views/molecules/MarkdownTOC';
 
 interface Props {
   params: {
@@ -32,9 +33,9 @@ export default async function Page({ params }: Props) {
     const postTitle = decodeURIComponent(params.fileName);
     const fileName = postTitle + '.md';
     const data = await getData(fileName);
-    const markdownContent = parseBase64ToString(data.content);
-    const content = markdownContent.replace(regProperties, '');
-    const properties = getProperties(markdownContent);
+    const markdown = parseBase64ToString(data.content);
+    const properties = getProperties(markdown);
+    const markdownContent = removePropertiesFromPostMarkdown(markdown);
 
     return (
       <Main>
@@ -45,7 +46,8 @@ export default async function Page({ params }: Props) {
         <Divider />
 
         <PageContent>
-          <Markdown>{content}</Markdown>
+          <MarkdownTOC content={markdownContent} style={{ marginBottom: 60 }} />
+          <Markdown>{markdownContent}</Markdown>
         </PageContent>
       </Main>
     );
@@ -71,4 +73,8 @@ const getProperties = (fileContent: string) => {
     createdAt,
     tags,
   };
+};
+
+const removePropertiesFromPostMarkdown = (markdown: string) => {
+  return markdown.replace(regProperties, '');
 };

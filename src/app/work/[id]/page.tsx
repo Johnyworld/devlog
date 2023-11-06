@@ -8,6 +8,7 @@ import { WorkTitle } from '@components/views/organisms/WorkTitle';
 import { NotFound } from '@components/views/organisms/NotFound';
 import { getProjects } from 'src/calls/getProjects';
 import { getToyProjects } from 'src/calls/getToyProjects';
+import { MarkdownTOC } from '@components/views/molecules/MarkdownTOC';
 
 interface Props {
   params: {
@@ -33,6 +34,7 @@ export default async function Page({ params }: Props) {
     const projects = getProjects();
     const toyProjects = getToyProjects();
     const project = [...projects, ...toyProjects].find(work => work.id === id);
+    const markdownContent = parseBase64ToString(data.content);
 
     return (
       <Main>
@@ -42,7 +44,8 @@ export default async function Page({ params }: Props) {
 
         {data !== null ? (
           <PageContent>
-            <Markdown>{parseBase64ToString(data.content)}</Markdown>
+            <MarkdownTOC content={markdownContent} style={{ marginBottom: 60 }} />
+            <Markdown>{markdownContent}</Markdown>
           </PageContent>
         ) : (
           <PageContent>내용이 없습니다.</PageContent>

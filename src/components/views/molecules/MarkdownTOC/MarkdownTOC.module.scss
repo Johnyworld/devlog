@@ -1,0 +1,18 @@
+@import '@style/variables';
+
+.markdownTOC {
+  font-size: 13px;
+  color: $color-gray;
+
+  ul ul {
+    margin-left: 20px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  li {
+    margin: 8px 0;
+  }
+}

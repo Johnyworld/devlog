@@ -3,6 +3,7 @@ import Markdown from '@components/views/molecules/Markdown';
 import { CV_FILE_API_END_POINT } from '@utils/constants';
 import { parseBase64ToString } from '@utils/parseBase64ToString';
 import { Main } from '@components/views/layouts/Main';
+import { MarkdownTOC } from '@components/views/molecules/MarkdownTOC';
 
 async function getData() {
   const res = await fetch(CV_FILE_API_END_POINT, {
@@ -22,6 +23,7 @@ export default async function Page() {
     <Main>
       <div>
         <PageContent>
+          <MarkdownTOC content={markdownContent} style={{ marginBottom: 60 }} />
           <Markdown>{markdownContent}</Markdown>
         </PageContent>
       </div>
