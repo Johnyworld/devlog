@@ -30,7 +30,8 @@ h5,
 h6,
 ul,
 li,
-p {
+p,
+button {
   padding: unset;
   margin: unset;
 }
@@ -90,4 +91,12 @@ a {
 
 button {
   border: none;
+  cursor: pointer;
+  font-size: unset;
+  font-weight: unset;
+  background: unset;
+  color: unset;
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue',
+    'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', sans-serif;
 }

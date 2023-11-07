@@ -3,7 +3,6 @@
 
 .copyableContent {
   position: relative;
-  cursor: pointer;
 
   @include isTabletOrLessWidth() {
     $icon-size: 14px;

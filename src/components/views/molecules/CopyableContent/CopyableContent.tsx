@@ -22,7 +22,7 @@ export const CopyableContent = ({ text, children, ...restProps }: Props) => {
         setCopied(true);
       }}
     >
-      <span {...restProps} className={classNames(style.copyableContent, restProps.className)}>
+      <button {...restProps} className={classNames(style.copyableContent, restProps.className)}>
         {children}
 
         {copied ? (
@@ -51,7 +51,7 @@ export const CopyableContent = ({ text, children, ...restProps }: Props) => {
             </span>
           </span>
         )}
-      </span>
+      </button>
     </CopyToClipboard>
   );
 };
