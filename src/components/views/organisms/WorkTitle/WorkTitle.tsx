@@ -25,14 +25,18 @@ export const WorkTitle = ({ data }: Props) => {
             <div className={style.workTitle_link}>
               <strong>방문하기</strong>
               <span> · </span>
-              <Link href={href}>{href}</Link>
+              <Link href={href} target='_blank'>
+                {href}
+              </Link>
             </div>
           )}
           {github && (
             <div className={style.workTitle_link}>
               <strong>깃헙</strong>
               <span> · </span>
-              <Link href={github}>{github}</Link>
+              <Link href={github} target='_blank'>
+                {github}
+              </Link>
             </div>
           )}
         </div>
