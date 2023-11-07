@@ -1,4 +1,6 @@
 import Analytics from '@components/containers/Analytics';
+import { GoToTop } from '@components/containers/GoToTop';
+import PageContent from '@components/views/layouts/PageContent';
 import { Header } from '@components/views/organisms/Header';
 import '@style/index.scss';
 import { Suspense } from 'react';
@@ -41,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Suspense>
         <Header />
         {children}
+        <GoToTop />
       </body>
     </html>
   );
