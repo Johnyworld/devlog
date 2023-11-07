@@ -4,6 +4,7 @@ import { CV_FILE_API_END_POINT } from '@utils/constants';
 import { parseBase64ToString } from '@utils/parseBase64ToString';
 import { Main } from '@components/views/layouts/Main';
 import { MarkdownTOC } from '@components/views/molecules/MarkdownTOC';
+import { Metadata } from 'next';
 
 async function getData() {
   const res = await fetch(CV_FILE_API_END_POINT, {
@@ -29,4 +30,14 @@ export default async function Page() {
       </div>
     </Main>
   );
+}
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = 'Johny Kim: Curriculum Vitae';
+  return {
+    title,
+    openGraph: {
+      title,
+    },
+  };
 }

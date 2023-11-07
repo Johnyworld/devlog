@@ -9,6 +9,7 @@ import { NotFound } from '@components/views/organisms/NotFound';
 import { getProjects } from 'src/calls/getProjects';
 import { getToyProjects } from 'src/calls/getToyProjects';
 import { MarkdownTOC } from '@components/views/molecules/MarkdownTOC';
+import { Metadata, ResolvingMetadata } from 'next';
 
 interface Props {
   params: {
@@ -61,4 +62,18 @@ export default async function Page({ params }: Props) {
       </Main>
     );
   }
+}
+
+export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+  const id = decodeURI(params.id);
+  const projects = getProjects();
+  const toyProjects = getToyProjects();
+  const project = [...projects, ...toyProjects].find(work => work.id === id);
+
+  return {
+    title: project?.title ?? 'Johny Kim',
+    openGraph: {
+      title: id,
+    },
+  };
 }

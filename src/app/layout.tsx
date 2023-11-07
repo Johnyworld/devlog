@@ -8,7 +8,7 @@ import { Suspense } from 'react';
 const siteName = 'JohnyKimBlog';
 const title = 'Johny Kim Blog';
 const description = '프론트엔드 개발자 조니의 블로그입니다.';
-const keywords = '프론트엔드, 개발자, 조니킴, 블로그, frontend, developer, engineer, johny, johny kim, blog';
+const keywords = '프론트엔드, 개발자, 조니킴, 블로그, 김재환, frontend, developer, engineer, johny, johny kim, blog';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
