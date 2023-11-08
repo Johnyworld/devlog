@@ -1,5 +1,10 @@
+'use client';
+
 import { Prism as SyntaxHighlighter, SyntaxHighlighterProps } from 'react-syntax-highlighter';
-import { CSSProperties, HTMLAttributes, isValidElement } from 'react';
+import { CSSProperties, HTMLAttributes, isValidElement, useState } from 'react';
+import style from './style.module.scss';
+import { useDebounce } from '@utils/useDebounce';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 export const OverridePre = ({ children, ...rest }: HTMLAttributes<HTMLPreElement>) => {
   if (isValidElement(children) && children.type === 'code') {
@@ -9,14 +14,41 @@ export const OverridePre = ({ children, ...rest }: HTMLAttributes<HTMLPreElement
 };
 
 const CodeBlock = ({ className, children }: SyntaxHighlighterProps) => {
+  const [copied, setCopied] = useState(false);
+
+  useDebounce(copied, 2 * 1000, () => setCopied(false));
+
   let lang = 'text'; // default monospaced text
   if (className && className.startsWith('lang-')) {
     lang = className.replace('lang-', '');
   }
+
   return (
-    <SyntaxHighlighter language={lang} style={customMaterialDark}>
-      {children}
-    </SyntaxHighlighter>
+    <div className={style.overridePre}>
+      <SyntaxHighlighter language={lang} style={customMaterialDark}>
+        {children}
+      </SyntaxHighlighter>
+      <CopyToClipboard
+        text={'```' + lang + '\n' + (typeof children === 'string' ? children : children.join('\n')) + '\n' + '```'}
+        options={{ format: 'text/plain' }}
+        onCopy={() => {
+          setCopied(true);
+        }}
+      >
+        <button className={style.copyButton}>
+          {copied ? (
+            <svg width='16' height='16' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <path d='M2 9.6L6.28571 14L17 3' stroke='#76C47E' strokeWidth='2' />
+            </svg>
+          ) : (
+            <svg width='16' height='16' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+              <rect className='regularStroke' x='2' y='4' width='12' stroke='white' height='12' strokeWidth='1' />
+              <path className='regularStroke' d='M5 1H17V13' stroke='white' strokeWidth='1' />
+            </svg>
+          )}
+        </button>
+      </CopyToClipboard>
+    </div>
   );
 };
 
