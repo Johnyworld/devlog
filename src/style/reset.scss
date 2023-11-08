@@ -100,3 +100,28 @@ button {
     'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol', sans-serif;
 }
+
+table {
+  padding: 0;
+  border: 0;
+  border-spacing: 0px;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  min-width: 400px;
+
+  th,
+  td {
+    padding: 8px 0 12px;
+    padding-right: 16px;
+    border-bottom: 1px solid $color-gray-weaker;
+    vertical-align: top;
+    line-height: 1.4;
+  }
+  th {
+    padding-bottom: 4px;
+  }
+  td:last-child {
+    padding-right: 8px;
+  }
+}

@@ -174,3 +174,14 @@
     }
   }
 }
+
+div.overrideTable {
+  margin-bottom: 30px;
+
+  @include isMobileOrLessWidth {
+    overflow-x: auto;
+    padding: 0 20px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}
