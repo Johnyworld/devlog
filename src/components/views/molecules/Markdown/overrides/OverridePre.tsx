@@ -2,7 +2,7 @@
 
 import { Prism as SyntaxHighlighter, SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import { CSSProperties, HTMLAttributes, isValidElement, useState } from 'react';
-import style from './style.module.scss';
+import style from './MarkdownOverrides.module.scss';
 import { useDebounce } from '@utils/useDebounce';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
