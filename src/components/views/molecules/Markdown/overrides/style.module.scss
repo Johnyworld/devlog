@@ -18,5 +18,10 @@
         background-color: #424242;
       }
     }
+
+    @include isMobileOrLessWidth {
+      right: -4px;
+      top: 16px;
+    }
   }
 }
