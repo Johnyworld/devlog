@@ -1,4 +1,5 @@
 @import '@style/variables';
+@import '@style/mixins';
 
 .goToTopButton_Positioner {
   position: fixed;
@@ -9,13 +10,20 @@
 
 .goToTopButton {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 36px;
-  height: 36px;
+  bottom: 15px;
+  right: -30px;
+  width: 40px;
+  height: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(3px);
+
+  @include isTabletOrLessWidth {
+    right: 30px;
+  }
+  @include isMobileOrLessWidth {
+    right: 15px;
+  }
 }
