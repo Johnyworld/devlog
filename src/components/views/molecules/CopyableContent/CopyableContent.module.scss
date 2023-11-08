@@ -2,6 +2,7 @@
 @import '@style/mixins';
 
 .copyableContent {
+  text-align: inherit;
   position: relative;
 
   @include isTabletOrLessWidth() {
