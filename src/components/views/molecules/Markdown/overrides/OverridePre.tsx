@@ -2,7 +2,7 @@
 
 import { Prism as SyntaxHighlighter, SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import { CSSProperties, HTMLAttributes, isValidElement, useState } from 'react';
-import style from './MarkdownOverrides.module.scss';
+import style from '../Markdown.module.scss';
 import { useDebounce } from '@utils/useDebounce';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
@@ -37,11 +37,11 @@ const CodeBlock = ({ className, children }: SyntaxHighlighterProps) => {
       >
         <button className={style.copyButton}>
           {copied ? (
-            <svg width='16' height='16' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <svg width='14' height='14' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <path d='M2 9.6L6.28571 14L17 3' stroke='#76C47E' strokeWidth='2' />
             </svg>
           ) : (
-            <svg width='16' height='16' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
+            <svg width='14' height='14' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'>
               <rect className='regularStroke' x='2' y='4' width='12' stroke='white' height='12' strokeWidth='1' />
               <path className='regularStroke' d='M5 1H17V13' stroke='white' strokeWidth='1' />
             </svg>
