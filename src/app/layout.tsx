@@ -1,6 +1,5 @@
 import Analytics from '@components/containers/Analytics';
 import { GoToTop } from '@components/containers/GoToTop';
-import PageContent from '@components/views/layouts/PageContent';
 import { Header } from '@components/views/organisms/Header';
 import '@style/index.scss';
 import { Suspense } from 'react';
@@ -12,7 +11,7 @@ const keywords = '프론트엔드, 개발자, 조니킴, 블로그, 김재환, f
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang='en'>
+    <html lang='ko'>
       <head>
         <title>Johny Kim</title>
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
