@@ -10,7 +10,7 @@
 
     .copyableContent_box {
       position: absolute;
-      right: #{- $icon-size - 4px};
+      padding-left: 4px;
       transform: translateY(-12%);
     }
 
