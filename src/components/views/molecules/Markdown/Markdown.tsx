@@ -5,6 +5,7 @@ import style from './Markdown.module.scss';
 import { OverrideAnchorByLink } from './overrides/OverrideAnchorByLink';
 import { usePathname } from 'next/navigation';
 import { CopyableContent } from '../CopyableContent';
+import { OverridePre } from './overrides/OverridePre';
 
 interface Props {
   children: string;
@@ -23,6 +24,7 @@ const Markdown = ({ children, options }: Props) => {
         slugify: str => str,
         overrides: {
           a: OverrideAnchorByLink,
+          pre: OverridePre,
           h1: props => (
             <h1 {...props}>
               <CopyableContent text={basePath + `#${props.id}`}>{props.children}</CopyableContent>
