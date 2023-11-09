@@ -125,3 +125,14 @@ table {
     padding-right: 8px;
   }
 }
+
+.utterances_wrapper {
+  margin-top: 80px;
+  margin-left: -4px;
+  margin-right: -4px;
+
+  @include isMobileOrLessWidth {
+    margin-left: -14px;
+    margin-right: -14px;
+  }
+}

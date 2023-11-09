@@ -8,6 +8,7 @@ import { PostTitle } from '@components/views/organisms/PostTitle';
 import { NotFound } from '@components/views/organisms/NotFound';
 import { MarkdownTOC } from '@components/views/molecules/MarkdownTOC';
 import { Metadata, ResolvingMetadata } from 'next';
+import { PostComment } from '@components/containers/PostComment';
 
 interface Props {
   params: {
@@ -49,6 +50,10 @@ export default async function Page({ params }: Props) {
         <PageContent>
           <MarkdownTOC content={markdownContent} style={{ marginBottom: 60 }} />
           <Markdown>{markdownContent}</Markdown>
+        </PageContent>
+
+        <PageContent>
+          <PostComment />
         </PageContent>
       </Main>
     );
