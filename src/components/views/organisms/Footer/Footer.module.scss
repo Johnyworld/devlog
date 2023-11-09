@@ -1,0 +1,9 @@
+@import '@style/variables';
+
+.footer {
+  padding: 12px 0;
+  p {
+    font-size: 10px;
+    color: $color-gray-strong;
+  }
+}
