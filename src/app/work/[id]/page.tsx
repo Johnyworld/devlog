@@ -10,6 +10,7 @@ import { getProjects } from 'src/calls/getProjects';
 import { getToyProjects } from 'src/calls/getToyProjects';
 import { MarkdownTOC } from '@components/views/molecules/MarkdownTOC';
 import { Metadata, ResolvingMetadata } from 'next';
+import { PostComment } from '@components/containers/PostComment';
 
 interface Props {
   params: {
@@ -51,6 +52,10 @@ export default async function Page({ params }: Props) {
         ) : (
           <PageContent>내용이 없습니다.</PageContent>
         )}
+
+        <PageContent>
+          <PostComment />
+        </PageContent>
       </Main>
     );
   } catch {
