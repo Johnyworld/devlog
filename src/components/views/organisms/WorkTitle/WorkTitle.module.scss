@@ -17,8 +17,9 @@
   }
 
   .workTitle_link {
+    font-size: $font-small;
     &:not(:first-child) {
-      margin-top: 4px;
+      margin-top: 6px;
     }
 
     a {

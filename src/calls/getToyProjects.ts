@@ -10,6 +10,7 @@ export const getToyProjects = (): Work[] => {
       thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/react-drag-thumb-1-min.png',
       github: 'https://github.com/Johnyworld/react-ui-playground',
       href: 'https://johnyworld.github.io/react-ui-playground/#/',
+      hasOwnPage: true,
     },
     {
       id: 'mordern-pirates',
@@ -18,6 +19,7 @@ export const getToyProjects = (): Work[] => {
       createdAt: '2019-05-19',
       thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/mordern-pirates-1.jpg',
       href: 'http://modern-pirates.s3-website.ap-northeast-2.amazonaws.com/',
+      hasOwnPage: true,
     },
     {
       id: 'conv250',
@@ -27,6 +29,7 @@ export const getToyProjects = (): Work[] => {
       thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/conv250.png',
       href: 'http://conv-250.s3-website.ap-northeast-2.amazonaws.com/',
       github: 'https://github.com/Johnyworld/conv250',
+      hasOwnPage: true,
     },
     {
       id: 'rpg-moving',
@@ -35,6 +38,7 @@ export const getToyProjects = (): Work[] => {
       createdAt: '2019-03-30',
       thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/slider/thumbnail/pc/rpg-moving.jpg',
       href: 'http://rpg-moving.s3-website.ap-northeast-2.amazonaws.com/',
+      hasOwnPage: true,
     },
     {
       id: 'masonry',
@@ -44,6 +48,7 @@ export const getToyProjects = (): Work[] => {
       thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/masonry.png',
       href: 'http://jw-masonry-grid.s3-website.ap-northeast-2.amazonaws.com/',
       github: 'https://github.com/Johnyworld/masonlygrid',
+      hasOwnPage: true,
     },
     {
       id: 'dow',
@@ -53,6 +58,7 @@ export const getToyProjects = (): Work[] => {
       thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/dow.png',
       href: 'http://dow-crossroad.s3-website.ap-northeast-2.amazonaws.com/',
       github: 'https://github.com/Johnyworld/dowcrossroad',
+      hasOwnPage: true,
     },
     {
       id: 'bang-card-picker',
@@ -62,6 +68,7 @@ export const getToyProjects = (): Work[] => {
       thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/bangcards.png',
       href: 'http://bang-pickcard.s3-website.ap-northeast-2.amazonaws.com/',
       github: 'https://github.com/Johnyworld/bang-cardpicker',
+      hasOwnPage: true,
     },
     {
       id: 'supermariojump',
@@ -71,6 +78,7 @@ export const getToyProjects = (): Work[] => {
       thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/slider/thumbnail/pc/mario-jump.jpg',
       href: 'https://supermariojump.vercel.app/',
       github: 'https://github.com/Johnyworld/supermariojump',
+      hasOwnPage: true,
     },
   ];
 };
