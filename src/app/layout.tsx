@@ -3,7 +3,6 @@ import { GoToTop } from '@components/containers/GoToTop';
 import { Footer } from '@components/views/organisms/Footer';
 import { Header } from '@components/views/organisms/Header';
 import '@style/index.scss';
-import { themeInitializerScript } from '@utils/theme';
 import { Suspense } from 'react';
 
 const siteName = 'JohnyKimBlog';
@@ -12,6 +11,20 @@ const description = '프론트엔드 개발자 조니의 블로그입니다.';
 const keywords = '프론트엔드, 개발자, 조니킴, 블로그, 김재환, frontend, developer, engineer, johny, johny kim, blog';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const themeInitializerScript = `(function() {
+    const localStorageTheme = localStorage.getItem('theme');
+    if (localStorageTheme !== null) {
+      document.documentElement.setAttribute('data-theme', localStorageTheme);
+    } else {
+      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'light');
+      }
+    }
+  })()
+  `;
+
   return (
     <html lang='ko'>
       <head>
@@ -39,11 +52,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href='https://fonts.googleapis.com/css2?family=Inconsolata&display=swap' rel='stylesheet' />
       </head>
       <body>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: themeInitializerScript,
-          }}
-        />
         <Suspense>
           <Analytics />
         </Suspense>
@@ -51,6 +59,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <GoToTop />
         <Footer />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: themeInitializerScript,
+          }}
+        />
       </body>
     </html>
   );
