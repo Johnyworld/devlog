@@ -27,11 +27,6 @@ const Markdown = ({ children, options }: Props) => {
           a: OverrideAnchorByLink,
           pre: OverridePre,
           table: OverrideTable,
-          h1: props => (
-            <h1 {...props}>
-              <CopyableContent text={basePath + `#${props.id}`}>{props.children}</CopyableContent>
-            </h1>
-          ),
           h2: props => (
             <h2 {...props}>
               <CopyableContent text={basePath + `#${props.id}`}>{props.children}</CopyableContent>
