@@ -62,6 +62,11 @@ h4,
 h5,
 h6 {
   color: $color-letter-strong;
+  sub {
+    vertical-align: baseline;
+    font-size: inherit;
+    font-weight: 100;
+  }
 }
 
 li {
@@ -115,18 +120,19 @@ table {
   border-collapse: collapse;
   text-align: left;
   font-size: 14px;
+  width: 100%;
   min-width: 400px;
 
   th,
   td {
-    padding: 8px 0 12px;
+    padding: 8px 0;
     padding-right: 16px;
     border-bottom: 1px solid $color-gray-weaker;
     vertical-align: top;
     line-height: 1.4;
   }
   th {
-    padding-bottom: 4px;
+    border-top: 1px solid $color-gray-weaker;
   }
   td:last-child {
     padding-right: 8px;
