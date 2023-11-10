@@ -2,7 +2,7 @@
 
 $light-theme: (
   primary: #3e778c,
-  letter-strong: #333,
+  letter-strong: #222,
   letter: #5a5a5a,
   bg: #fff,
   gray-stronger: #61656c,
@@ -10,6 +10,20 @@ $light-theme: (
   gray: #b1b6ba,
   gray-weaker: #dddde1,
   gray-weakest: #f8f9f9,
+  glass: #ffffffcc,
+);
+
+$dark-theme: (
+  primary: #7cbfd7,
+  letter-strong: #eaeaf0,
+  letter: #c4c4cb,
+  bg: #272728,
+  gray-stronger: #bdbdc1,
+  gray-strong: #9b9b9f,
+  gray: #717174,
+  gray-weaker: #3b3b3c,
+  gray-weakest: #303032,
+  glass: #272728cc,
 );
 
 $font-sizes: (
@@ -45,5 +59,11 @@ $font-weights: (
 
   @each $key, $value in $font-weights {
     #{"--font-" + $key}: #{$value};
+  }
+}
+
+[data-theme='dark'] {
+  @each $key, $value in $dark-theme {
+    #{"--color-" + $key}: #{$value};
   }
 }

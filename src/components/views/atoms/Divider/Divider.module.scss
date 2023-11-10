@@ -1,8 +1,9 @@
+@import '@style/variables';
 @import '@style/mixins';
 
 .divider {
   height: 1px;
-  background-color: #f3f3f6;
+  background-color: $color-gray-weaker;
   margin: 40px 0;
 
   @include isMobileOrLessWidth() {

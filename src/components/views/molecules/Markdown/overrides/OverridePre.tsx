@@ -55,11 +55,9 @@ const CodeBlock = ({ className, children }: SyntaxHighlighterProps) => {
 const customMaterialDark: Record<string, CSSProperties> = {
   'code[class*="language-"]': {
     color: '#eee',
-    backgroundColor: '#2f2f2f',
   },
   'pre[class*="language-"]': {
     color: '#eee',
-    backgroundColor: '#2f2f2f',
   },
   'code[class*="language-"]::-moz-selection': {
     background: '#363636',
