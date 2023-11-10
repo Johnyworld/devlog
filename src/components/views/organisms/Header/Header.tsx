@@ -5,6 +5,7 @@ import PageContent from '@components/views/layouts/PageContent';
 import { getRoute } from '@utils/routes';
 import { NavigationMenu } from '../NavigationMenu';
 import style from './Header.module.scss';
+import { ThemeToggleButton } from '@components/containers/ThemeToggleButton';
 
 export const Header = () => {
   const pathname = usePathname();
@@ -13,16 +14,19 @@ export const Header = () => {
   return (
     <header className={style.header}>
       <PageContent>
-        <nav>
-          <NavigationMenu
-            currentMenu={currentMenu || 'post'}
-            data={[
-              { id: 'post', title: 'BLOG', href: getRoute.root() },
-              { id: 'work', title: 'WORK', href: getRoute.work() },
-              { id: 'cv', title: 'CV', href: getRoute.cv() },
-            ]}
-          />
-        </nav>
+        <div className={style.header_container}>
+          <nav>
+            <NavigationMenu
+              currentMenu={currentMenu || 'post'}
+              data={[
+                { id: 'post', title: 'BLOG', href: getRoute.root() },
+                { id: 'work', title: 'WORK', href: getRoute.work() },
+                { id: 'cv', title: 'CV', href: getRoute.cv() },
+              ]}
+            />
+          </nav>
+          <ThemeToggleButton />
+        </div>
       </PageContent>
     </header>
   );
