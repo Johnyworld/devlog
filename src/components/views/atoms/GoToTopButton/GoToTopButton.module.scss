@@ -6,6 +6,9 @@
   bottom: 0;
   left: 0;
   right: 0;
+  max-width: $page-width;
+  margin: 0 auto;
+  padding: 0 $page-margin;
 }
 
 .goToTopButton {

@@ -44,6 +44,8 @@ $font-weights: (
 );
 
 :root {
+  --page-width: 600px;
+  --page-margin: 20px;
   --header-height: 42px;
   @include isMobileOrLessWidth {
     --header-height: 48px;

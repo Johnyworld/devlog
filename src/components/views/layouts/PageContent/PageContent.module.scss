@@ -1,8 +1,10 @@
+@import '@style/variables';
+
 .pageContent {
   position: relative;
-  max-width: 600px;
+  max-width: $page-width;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 $page-margin;
 
   @media print {
     max-width: 80%;
