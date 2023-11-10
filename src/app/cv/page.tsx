@@ -24,7 +24,6 @@ export default async function Page() {
     <Main>
       <div>
         <PageContent>
-          <MarkdownTOC content={markdownContent} style={{ marginBottom: 60 }} />
           <Markdown>{markdownContent}</Markdown>
         </PageContent>
       </div>
