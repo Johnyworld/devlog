@@ -58,4 +58,10 @@
       }
     }
   }
+
+  @media print {
+    .copyableContent_button {
+      display: none;
+    }
+  }
 }

@@ -137,4 +137,8 @@ table {
   margin-top: 80px;
   margin-left: -4px;
   margin-right: -4px;
+
+  @media print {
+    display: none;
+  }
 }
