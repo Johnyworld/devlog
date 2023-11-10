@@ -3,6 +3,7 @@ import { GoToTop } from '@components/containers/GoToTop';
 import { Footer } from '@components/views/organisms/Footer';
 import { Header } from '@components/views/organisms/Header';
 import '@style/index.scss';
+import { themeInitializerScript } from '@utils/theme';
 import { Suspense } from 'react';
 
 const siteName = 'JohnyKimBlog';
@@ -38,6 +39,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href='https://fonts.googleapis.com/css2?family=Inconsolata&display=swap' rel='stylesheet' />
       </head>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: themeInitializerScript,
+          }}
+        />
         <Suspense>
           <Analytics />
         </Suspense>
