@@ -169,7 +169,7 @@
   @include isHoverableDivice {
     .copyButton {
       &:hover {
-        background-color: #424242;
+        background-color: #323234;
       }
     }
   }
@@ -180,7 +180,7 @@
     }
 
     .copyButton {
-      background-color: #424242;
+      background-color: #323234;
       right: -4px;
       top: 16px;
     }
