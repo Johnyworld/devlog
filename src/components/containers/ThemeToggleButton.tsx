@@ -1,9 +1,10 @@
 'use client';
 
+import { ThemeToggleButton } from '@components/views/molecules/ThemeToggleButton';
 import { Theme, getCurrentTheme } from '@utils/theme';
 import { useEffect, useState } from 'react';
 
-export const ThemeToggleButton = () => {
+export const ThemeToggle = () => {
   const [themeState, setThemeState] = useState<Theme | null>(null);
 
   const toggle = () => {
@@ -26,5 +27,5 @@ export const ThemeToggleButton = () => {
     return null;
   }
 
-  return <button onClick={toggle}>{themeState === 'light' ? '🌞' : '🌜'}</button>;
+  return <ThemeToggleButton theme={themeState} onClick={toggle} />;
 };

@@ -5,7 +5,7 @@ import PageContent from '@components/views/layouts/PageContent';
 import { getRoute } from '@utils/routes';
 import { NavigationMenu } from '../NavigationMenu';
 import style from './Header.module.scss';
-import { ThemeToggleButton } from '@components/containers/ThemeToggleButton';
+import { ThemeToggle } from '@components/containers/ThemeToggleButton';
 
 export const Header = () => {
   const pathname = usePathname();
@@ -25,7 +25,7 @@ export const Header = () => {
               ]}
             />
           </nav>
-          <ThemeToggleButton />
+          <ThemeToggle />
         </div>
       </PageContent>
     </header>

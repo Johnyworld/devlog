@@ -1,0 +1,13 @@
+@import '@style/variables';
+@import '@style/mixins';
+
+.themeToggleButton {
+  padding: 2px 4px;
+  border-radius: 4px;
+
+  @include isHoverableDivice {
+    &:hover {
+      background-color: $color-gray-weakest;
+    }
+  }
+}
