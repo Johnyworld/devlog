@@ -198,3 +198,10 @@ div.overrideTable {
     margin-right: -20px;
   }
 }
+
+div.overrideIframe {
+  @include isMobileOrLessWidth {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+}

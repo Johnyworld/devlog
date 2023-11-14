@@ -7,6 +7,7 @@ import { usePathname } from 'next/navigation';
 import { CopyableContent } from '../CopyableContent';
 import { OverridePre } from './overrides/OverridePre';
 import { OverrideTable } from './overrides/OverrideTable';
+import { OverrideIframe } from './overrides/OverrideIframe';
 
 interface Props {
   children: string;
@@ -27,6 +28,7 @@ const Markdown = ({ children, options }: Props) => {
           a: OverrideAnchorByLink,
           pre: OverridePre,
           table: OverrideTable,
+          iframe: OverrideIframe,
           h2: props => (
             <h2 {...props}>
               <CopyableContent text={basePath + `#${props.id}`}>{props.children}</CopyableContent>
