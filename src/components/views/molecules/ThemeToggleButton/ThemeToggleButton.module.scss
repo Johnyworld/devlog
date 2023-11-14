@@ -2,8 +2,11 @@
 @import '@style/mixins';
 
 .themeToggleButton {
-  padding: 2px 4px;
   border-radius: 4px;
+
+  button {
+    padding: 2px 4px;
+  }
 
   @include isHoverableDivice {
     &:hover {
