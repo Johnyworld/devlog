@@ -3,6 +3,16 @@ import { Work } from 'type';
 export const getProjects = (): Work[] => {
   return [
     {
+      id: 'devlog-2023',
+      title: '기술 블로그',
+      description: '바로 여기입니다.',
+      createdAt: '2023-11-14',
+      thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/devlog-1.png',
+      github: 'https://github.com/Johnyworld/devlog',
+      href: 'https://johnykim.me',
+      hasOwnPage: true,
+    },
+    {
       id: 'tumssum',
       title: '가계부 서비스: 틈씀이',
       description: '직접 사용하기 위해 개발한 가계부 서비스.',
@@ -29,7 +39,7 @@ export const getProjects = (): Work[] => {
       hasOwnPage: true,
     },
     {
-      id: 'johnyworld_2019',
+      id: 'johnyworld-2019',
       title: '2019 포트폴리오',
       description: '2019년 포트폴리오이자 리액트로 개발한 첫 사이트.',
       createdAt: '2019-07-25',
@@ -38,7 +48,7 @@ export const getProjects = (): Work[] => {
       hasOwnPage: true,
     },
     {
-      id: 'bicpic_ent',
+      id: 'bicpic-ent',
       title: '빅픽처 엔터테인먼트',
       description: '워드프레스 플러그인 개발.',
       createdAt: '2019-01-15',
