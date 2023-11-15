@@ -2,8 +2,9 @@ import Analytics from '@components/containers/Analytics';
 import { GoToTop } from '@components/containers/GoToTop';
 import { Footer } from '@components/views/organisms/Footer';
 import { Header } from '@components/views/organisms/Header';
-import '@style/index.scss';
 import { Suspense } from 'react';
+
+import '@style/index.scss';
 
 const siteName = 'JohnyKimBlog';
 const title = 'Johny Kim Blog';
@@ -12,7 +13,7 @@ const keywords = '프론트엔드, 개발자, 조니킴, 블로그, 김재환, f
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   const themeInitializerScript = `(function() {
-    const localStorageTheme = localStorage.getItem('theme');
+    const localStorageTheme = localStorage.getItem('johnylog_theme');
     if (localStorageTheme !== null) {
       document.documentElement.setAttribute('data-theme', localStorageTheme);
     } else {

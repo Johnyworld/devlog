@@ -1,3 +1,4 @@
 declare module 'type' {
-  export type URL = string;
+  type URL = string;
+  type Theme = 'light' | 'dark';
 }
