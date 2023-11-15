@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import cx from 'classnames';
 import style from './NavigationMenuItem.module.scss';
 

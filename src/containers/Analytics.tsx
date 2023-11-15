@@ -48,7 +48,7 @@ export default function Analytics() {
 }
 
 type WindowWithDataLayer = Window & {
-  dataLayer: Record<string, any>[];
+  dataLayer: Record<string, string>[];
 };
 
 declare const window: WindowWithDataLayer;

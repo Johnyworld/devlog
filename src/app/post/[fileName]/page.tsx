@@ -7,7 +7,7 @@ import { Divider } from '@components/atoms/Divider';
 import { PostTitle } from '@components/organisms/PostTitle';
 import { NotFound } from '@components/organisms/NotFound';
 import { MarkdownTOC } from '@components/molecules/MarkdownTOC';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import { PostComment } from '@containers/PostComment';
 
 interface Props {
@@ -85,7 +85,7 @@ const removePropertiesFromPostMarkdown = (markdown: string) => {
   return markdown.replace(regProperties, '');
 };
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const postTitle = decodeURIComponent(params.fileName);
 
   return {

@@ -1,7 +1,6 @@
 import { HTMLAttributes } from 'react';
 import style from './GoToTopButton.module.scss';
 import classNames from 'classnames';
-import PageContent from '@components/layouts/PageContent';
 
 interface Props extends Omit<HTMLAttributes<HTMLButtonElement>, 'children'> {}
 

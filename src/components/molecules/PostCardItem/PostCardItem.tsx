@@ -1,8 +1,6 @@
 import { Post } from 'type';
 import style from './PostCardItem.module.scss';
 import { formatISODatePart } from '@utils/string';
-import Link from 'next/link';
-import { getRoute } from '@utils/routes';
 
 interface Props {
   post: Post;

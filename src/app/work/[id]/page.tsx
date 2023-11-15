@@ -9,7 +9,7 @@ import { NotFound } from '@components/organisms/NotFound';
 import { getProjects } from 'src/calls/getProjects';
 import { getToyProjects } from 'src/calls/getToyProjects';
 import { MarkdownTOC } from '@components/molecules/MarkdownTOC';
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import { PostComment } from '@containers/PostComment';
 
 interface Props {
@@ -69,7 +69,7 @@ export default async function Page({ params }: Props) {
   }
 }
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const id = decodeURI(params.id);
   const projects = getProjects();
   const toyProjects = getToyProjects();

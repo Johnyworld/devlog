@@ -21,11 +21,9 @@ export default async function Page() {
 
   return (
     <Main>
-      <div>
-        <PageContent>
-          <Markdown>{markdownContent}</Markdown>
-        </PageContent>
-      </div>
+      <PageContent>
+        <Markdown>{markdownContent}</Markdown>
+      </PageContent>
     </Main>
   );
 }
