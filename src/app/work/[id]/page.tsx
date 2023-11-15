@@ -10,7 +10,7 @@ import { getProjects } from 'src/calls/getProjects';
 import { getToyProjects } from 'src/calls/getToyProjects';
 import { MarkdownTOC } from '@components/molecules/MarkdownTOC';
 import { Metadata, ResolvingMetadata } from 'next';
-import { PostComment } from 'src/pages/post/PostComment';
+import { PostComment } from '@containers/PostComment';
 
 interface Props {
   params: {

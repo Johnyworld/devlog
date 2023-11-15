@@ -3,9 +3,9 @@
 import { usePathname } from 'next/navigation';
 import PageContent from '@components/layouts/PageContent';
 import { getRoute } from '@utils/routes';
-import { NavigationMenu } from '../NavigationMenu';
+import { NavigationMenu } from '../../components/organisms/NavigationMenu';
 import style from './Header.module.scss';
-import { ThemeToggle } from 'src/pages/layout/ThemeToggle';
+import { ThemeToggle } from '@containers/ThemeToggle';
 
 export const Header = () => {
   const pathname = usePathname();

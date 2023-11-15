@@ -8,7 +8,7 @@ import { PostTitle } from '@components/organisms/PostTitle';
 import { NotFound } from '@components/organisms/NotFound';
 import { MarkdownTOC } from '@components/molecules/MarkdownTOC';
 import { Metadata, ResolvingMetadata } from 'next';
-import { PostComment } from 'src/pages/post/PostComment';
+import { PostComment } from '@containers/PostComment';
 
 interface Props {
   params: {
