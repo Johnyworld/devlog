@@ -1,8 +1,9 @@
 'use client';
 
-import { getCurrentTheme } from '@utils/theme';
+import { useThemeStore } from '@stores/theme';
 
 export const PostComment = () => {
+  const theme = useThemeStore(state => state.theme);
   return (
     <div
       className='utterances_wrapper'
@@ -15,7 +16,7 @@ export const PostComment = () => {
         scriptElem.async = true;
         scriptElem.setAttribute('repo', 'johnyworld/devlog');
         scriptElem.setAttribute('issue-term', 'pathname');
-        scriptElem.setAttribute('theme', `github-${getCurrentTheme()}`); // TODO: 상태관리 필요. 지금은 모드를 바꿔도 바로 반영이 안됨
+        scriptElem.setAttribute('theme', `github-${theme}`);
         scriptElem.setAttribute('label', 'comments');
         scriptElem.crossOrigin = 'anonymous';
         elem.replaceChildren(scriptElem);
