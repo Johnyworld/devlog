@@ -1,4 +1,4 @@
-import { WorkCardItem, WorkStatus } from '@components/views/molecules/WorkCardItem';
+import { WorkCardItem, WorkStatus } from '@components/molecules/WorkCardItem';
 import Link from 'next/link';
 import { Work } from 'type';
 import style from './WorkList.module.scss';

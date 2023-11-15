@@ -1,6 +1,6 @@
 'use client';
 
-import { ThemeToggleButton } from '@components/views/molecules/ThemeToggleButton';
+import { ThemeToggleButton } from '@components/molecules/ThemeToggleButton';
 import { useThemeStore } from 'src/stores/theme';
 
 export const ThemeToggle = () => {

@@ -1,6 +1,6 @@
-import { Main } from '@components/views/layouts/Main';
-import PageContent from '@components/views/layouts/PageContent';
-import { WorkList } from '@components/views/organisms/WorkList';
+import { Main } from '@components/layouts/Main';
+import PageContent from '@components/layouts/PageContent';
+import { WorkList } from '@components/organisms/WorkList';
 import { Metadata } from 'next';
 import { getProjects } from 'src/calls/getProjects';
 import { getToyProjects } from 'src/calls/getToyProjects';

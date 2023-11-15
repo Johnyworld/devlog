@@ -1,6 +1,6 @@
 'use client';
 
-import { GoToTopButton } from '@components/views/atoms/GoToTopButton';
+import { GoToTopButton } from '@components/atoms/GoToTopButton';
 
 export const GoToTop = () => {
   const scrollToTop = () => {

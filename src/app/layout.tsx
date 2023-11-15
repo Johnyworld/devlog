@@ -1,7 +1,7 @@
-import Analytics from '@components/containers/Analytics';
-import { GoToTop } from '@components/containers/GoToTop';
-import { Footer } from '@components/views/organisms/Footer';
-import { Header } from '@components/views/organisms/Header';
+import Analytics from 'src/pages/layout/Analytics';
+import { GoToTop } from 'src/pages/layout/GoToTop';
+import { Footer } from '@components/organisms/Footer';
+import { Header } from '@components/organisms/Header';
 import { Suspense } from 'react';
 
 import '@style/index.scss';

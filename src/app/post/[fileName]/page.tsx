@@ -1,14 +1,14 @@
-import PageContent from '@components/views/layouts/PageContent';
-import Markdown from '@components/views/molecules/Markdown';
+import PageContent from '@components/layouts/PageContent';
+import Markdown from '@components/molecules/Markdown';
 import { parseBase64ToString } from '@utils/parseBase64ToString';
 import { EACH_POST_API_END_POINT } from '@utils/constants';
-import { Main } from '@components/views/layouts/Main';
-import { Divider } from '@components/views/atoms/Divider';
-import { PostTitle } from '@components/views/organisms/PostTitle';
-import { NotFound } from '@components/views/organisms/NotFound';
-import { MarkdownTOC } from '@components/views/molecules/MarkdownTOC';
+import { Main } from '@components/layouts/Main';
+import { Divider } from '@components/atoms/Divider';
+import { PostTitle } from '@components/organisms/PostTitle';
+import { NotFound } from '@components/organisms/NotFound';
+import { MarkdownTOC } from '@components/molecules/MarkdownTOC';
 import { Metadata, ResolvingMetadata } from 'next';
-import { PostComment } from '@components/containers/PostComment';
+import { PostComment } from 'src/pages/post/PostComment';
 
 interface Props {
   params: {

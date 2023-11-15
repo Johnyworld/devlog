@@ -1,6 +1,6 @@
 'use client';
 
-import PageContent from '@components/views/layouts/PageContent';
+import PageContent from '@components/layouts/PageContent';
 import style from './Footer.module.scss';
 
 export const Footer = () => {

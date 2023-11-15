@@ -1,8 +1,8 @@
-import PageContent from '../components/views/layouts/PageContent';
-import Categories from '../components/views/organisms/Categories';
-import PostCards from '../components/views/organisms/PostCards';
+import PageContent from '../components/layouts/PageContent';
+import Categories from '../components/organisms/Categories';
+import PostCards from '../components/organisms/PostCards';
 import { ALL_CATEGORIES_KEY } from '../utils/constants';
-import { Main } from '@components/views/layouts/Main';
+import { Main } from '@components/layouts/Main';
 import { getPostList } from 'src/calls/getPostList';
 
 interface Props {

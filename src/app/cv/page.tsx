@@ -1,8 +1,8 @@
-import PageContent from '@components/views/layouts/PageContent';
-import Markdown from '@components/views/molecules/Markdown';
+import PageContent from '@components/layouts/PageContent';
+import Markdown from '@components/molecules/Markdown';
 import { CV_FILE_API_END_POINT } from '@utils/constants';
 import { parseBase64ToString } from '@utils/parseBase64ToString';
-import { Main } from '@components/views/layouts/Main';
+import { Main } from '@components/layouts/Main';
 import { Metadata } from 'next';
 
 async function getData() {
