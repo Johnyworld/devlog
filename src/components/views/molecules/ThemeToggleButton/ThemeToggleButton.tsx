@@ -3,7 +3,8 @@
 import { HTMLAttributes } from 'react';
 import styles from './ThemeToggleButton.module.scss';
 import classNames from 'classnames';
-import { Theme } from '@utils/theme';
+import { Theme } from 'type';
+import { NoSSRRendering } from '@utils/NoSSRRendering';
 
 interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
   theme: Theme | null;
@@ -11,12 +12,11 @@ interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
 }
 
 export const ThemeToggleButton = ({ theme, onClick, className, ...props }: Props) => {
-  if (!theme) {
-    return null;
-  }
   return (
-    <div {...props} className={classNames(styles.themeToggleButton, className)}>
-      <button onClick={onClick}>{theme === 'light' ? '🌞' : '🌜'}</button>
-    </div>
+    <NoSSRRendering>
+      <div {...props} className={classNames(styles.themeToggleButton, className)}>
+        <button onClick={onClick}>{theme === 'light' ? '🌞' : '🌜'}</button>
+      </div>
+    </NoSSRRendering>
   );
 };
