@@ -27,7 +27,7 @@ export const WorkList = ({ title, works }: Props) => {
           }
           if (href) {
             return (
-              <Link href={href} target='_blank'>
+              <Link href={href} target="_blank">
                 <WorkCardItem {...workProps} workStatus={workStatus} />
               </Link>
             );

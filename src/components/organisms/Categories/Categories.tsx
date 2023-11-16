@@ -18,7 +18,9 @@ const Categories = ({ posts, currentCategory }: Props) => {
     <div className={style.categories}>
       <Link
         href={getRoute.root()}
-        className={classNames(style.categories_tag, { selected: currentCategory === ALL_CATEGORIES_KEY })}
+        className={classNames(style.categories_tag, {
+          selected: currentCategory === ALL_CATEGORIES_KEY,
+        })}
       >
         <span>#전체보기</span>
         <span className={style.categories_count}>{posts.length}</span>

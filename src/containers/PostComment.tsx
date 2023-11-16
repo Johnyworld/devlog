@@ -6,7 +6,7 @@ export const PostComment = () => {
   const theme = useThemeStore(state => state.theme);
   return (
     <div
-      className='utterances_wrapper'
+      className="utterances_wrapper"
       ref={elem => {
         if (!elem) {
           return;

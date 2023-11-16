@@ -42,7 +42,11 @@ export default async function Page({ params }: Props) {
     return (
       <Main>
         <PageContent>
-          <PostTitle title={postTitle} createdAt={properties?.createdAt ?? ''} tags={properties?.tags ?? []} />
+          <PostTitle
+            title={postTitle}
+            createdAt={properties?.createdAt ?? ''}
+            tags={properties?.tags ?? []}
+          />
         </PageContent>
 
         <Divider />

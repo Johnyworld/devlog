@@ -40,7 +40,9 @@ export default async function Page({ params }: Props) {
 
     return (
       <Main>
-        <PageContent>{project ? <WorkTitle data={project} /> : <h1>데이터가 없어요</h1>}</PageContent>
+        <PageContent>
+          {project ? <WorkTitle data={project} /> : <h1>데이터가 없어요</h1>}
+        </PageContent>
 
         <Divider />
 

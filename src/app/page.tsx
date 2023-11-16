@@ -22,7 +22,9 @@ export default async function Page({ searchParams }: Props) {
       </PageContent>
       <PageContent>
         <PostCards
-          posts={posts.filter(post => currentCategory === ALL_CATEGORIES_KEY || post.tags.includes(currentCategory))}
+          posts={posts.filter(
+            post => currentCategory === ALL_CATEGORIES_KEY || post.tags.includes(currentCategory),
+          )}
         />
       </PageContent>
     </Main>

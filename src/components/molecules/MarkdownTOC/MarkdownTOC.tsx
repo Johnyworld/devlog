@@ -26,7 +26,13 @@ export const MarkdownTOC = ({ content, ...props }: Props) => {
   );
 };
 
-const HeadingTree = ({ headings, headingId }: { headings: Heading[]; headingId: number | undefined }) => {
+const HeadingTree = ({
+  headings,
+  headingId,
+}: {
+  headings: Heading[];
+  headingId: number | undefined;
+}) => {
   const children = headings.filter(item => item.parent === headingId);
   if (children.length === 0) {
     return null;

@@ -10,7 +10,7 @@ export const NotFound = () => {
       </div>
       <p>존재하지 않는 주소를 입력하셨거나, 페이지의 주소가 변경 또는 삭제되었습니다.</p>
       <div>
-        <Link href='/'>홈으로 돌아가기</Link>
+        <Link href="/">홈으로 돌아가기</Link>
       </div>
     </div>
   );

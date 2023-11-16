@@ -25,7 +25,7 @@ export const WorkTitle = ({ data }: Props) => {
             <div className={style.workTitle_link}>
               <strong>방문하기</strong>
               <span> · </span>
-              <Link href={href} target='_blank'>
+              <Link href={href} target="_blank">
                 {href}
               </Link>
             </div>
@@ -34,7 +34,7 @@ export const WorkTitle = ({ data }: Props) => {
             <div className={style.workTitle_link}>
               <strong>깃헙</strong>
               <span> · </span>
-              <Link href={github} target='_blank'>
+              <Link href={github} target="_blank">
                 {github}
               </Link>
             </div>

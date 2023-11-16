@@ -12,11 +12,11 @@ export default function Page() {
   return (
     <Main>
       <PageContent>
-        <WorkList title='Projects' works={projects} />
+        <WorkList title="Projects" works={projects} />
       </PageContent>
 
       <PageContent style={{ marginTop: 80 }}>
-        <WorkList title='Toy projects' works={toyProjects} />
+        <WorkList title="Toy projects" works={toyProjects} />
       </PageContent>
     </Main>
   );

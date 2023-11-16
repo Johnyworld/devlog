@@ -18,7 +18,9 @@ const getDefaultTheme = (): Theme => {
   if (localStorageTheme && isTheme(localStorageTheme)) {
     return localStorageTheme;
   }
-  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+    ? 'dark'
+    : 'light';
 };
 
 const isTheme = (str: string): str is Theme => {
@@ -33,5 +35,5 @@ export const useThemeStore = create<ThemeState>()(
       localStorage.setItem('johnylog_theme', newTheme);
       set(() => ({ theme: newTheme }));
     },
-  }))
+  })),
 );

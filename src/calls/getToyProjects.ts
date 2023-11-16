@@ -7,7 +7,8 @@ export const getToyProjects = (): Work[] => {
       title: 'React UI Playground',
       description: 'UI 연습 놀이터.',
       createdAt: '2022-04-01',
-      thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/react-drag-thumb-1-min.png',
+      thumbnail:
+        'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/react-drag-thumb-1-min.png',
       github: 'https://github.com/Johnyworld/react-ui-playground',
       href: 'https://johnyworld.github.io/react-ui-playground/#/',
       hasOwnPage: true,
@@ -17,7 +18,8 @@ export const getToyProjects = (): Work[] => {
       title: 'Modern Pirates',
       description: '포트리스류 게임.',
       createdAt: '2019-05-19',
-      thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/mordern-pirates-1.jpg',
+      thumbnail:
+        'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/mordern-pirates-1.jpg',
       href: 'http://modern-pirates.s3-website.ap-northeast-2.amazonaws.com/',
       hasOwnPage: true,
     },
@@ -36,7 +38,8 @@ export const getToyProjects = (): Work[] => {
       title: 'RPG Moving',
       description: '캐릭터 이동 시뮬레이터. 방향 키보드를 눌러보세요.',
       createdAt: '2019-03-30',
-      thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/slider/thumbnail/pc/rpg-moving.jpg',
+      thumbnail:
+        'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/slider/thumbnail/pc/rpg-moving.jpg',
       href: 'http://rpg-moving.s3-website.ap-northeast-2.amazonaws.com/',
       hasOwnPage: true,
     },
@@ -65,7 +68,8 @@ export const getToyProjects = (): Work[] => {
       title: 'Bang card picker',
       description: '보드게임 <뱅> 플레이를 돕기 위한 애드온.',
       createdAt: '2018-06-12',
-      thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/bangcards.png',
+      thumbnail:
+        'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/resume/bangcards.png',
       href: 'http://bang-pickcard.s3-website.ap-northeast-2.amazonaws.com/',
       github: 'https://github.com/Johnyworld/bang-cardpicker',
       hasOwnPage: true,
@@ -75,7 +79,8 @@ export const getToyProjects = (): Work[] => {
       title: 'Super Mario jump!',
       description: '제이쿼리 습작.',
       createdAt: '2017-12-01',
-      thumbnail: 'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/slider/thumbnail/pc/mario-jump.jpg',
+      thumbnail:
+        'https://johnyworld2019.s3.ap-northeast-2.amazonaws.com/images/slider/thumbnail/pc/mario-jump.jpg',
       href: 'https://supermariojump.vercel.app/',
       github: 'https://github.com/Johnyworld/supermariojump',
       hasOwnPage: true,
