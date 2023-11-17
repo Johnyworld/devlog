@@ -150,6 +150,36 @@
       color: $color-primary;
     }
   }
+
+  details {
+    &[open] {
+      margin-bottom: 40px;
+    }
+    margin: 4px 0;
+    display: block;
+
+    summary {
+      position: relative;
+      color: $color-gray-strong;
+      font-weight: 700;
+      padding: 6px;
+      cursor: pointer;
+      border-radius: 4px;
+      margin-left: -4px;
+      & + * {
+        margin-top: 10px;
+      }
+      &::marker {
+        font-size: 0.9em;
+        &[open] {
+          content: '-';
+        }
+      }
+      &:hover {
+        background-color: $color-gray-weakest;
+      }
+    }
+  }
 }
 
 .overridePre {
