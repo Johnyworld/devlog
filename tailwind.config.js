@@ -15,6 +15,10 @@ module.exports = {
       grayWeakest: 'var(--color-gray-weakest)',
       glass: 'var(--color-glass)',
       clickable: 'var(--color-clickable)',
+      // common
+      green: 'var(--color-green)',
+      grayDarkest: 'var(--color-gray-darkest)',
+      grayLight: 'var(--color-gray-light)',
     },
     fontSize: {
       '2xl': 'var(--font-huge)',
@@ -34,6 +38,9 @@ module.exports = {
       sm: '566px',
       md: '768px',
     },
+    boxShadow: {
+      sm: '0 0 2px',
+    },
     extend: {
       spacing: {
         1.5: '6px',
@@ -44,6 +51,12 @@ module.exports = {
       maxWidth: {
         pageWidth: 'var(--page-width)',
         '8/10': '80%',
+      },
+      aspectRatio: {
+        '16/9': '16/9',
+      },
+      contrast: {
+        90: 0.9,
       },
     },
   },

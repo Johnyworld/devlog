@@ -1,7 +1,6 @@
 import { WorkCardItem, WorkStatus } from '@components/molecules/WorkCardItem';
 import Link from 'next/link';
 import { Work } from 'type';
-import style from './WorkList.module.scss';
 import { getRoute } from '@utils/routes';
 
 interface Props {
@@ -11,9 +10,9 @@ interface Props {
 
 export const WorkList = ({ title, works }: Props) => {
   return (
-    <div className={style.workList}>
-      {title && <h2 className={style.workList_title}>{title}</h2>}
-      <div className={style.workList_grid}>
+    <div className="work-list">
+      {title && <h2 className="mb-4">{title}</h2>}
+      <div className="grid grid-cols-2 gap-x-4 gap-y-6">
         {works.map(work => {
           const { href, hasOwnPage, ...workProps } = work;
           const hasHref = href !== undefined;

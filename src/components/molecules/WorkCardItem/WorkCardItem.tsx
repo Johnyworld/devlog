@@ -1,5 +1,4 @@
 import { formatISODatePart } from '@utils/string';
-import style from './WorkCardItem.module.scss';
 import classNames from 'classnames';
 
 interface Props {
@@ -16,17 +15,27 @@ export enum WorkStatus {
 }
 
 export const WorkCardItem = ({ workStatus, title, description, thumbnail, createdAt }: Props) => {
-  const isLive = workStatus === WorkStatus.Live;
-  const statusText = isLive ? '운영중' : '중지됨';
   return (
-    <div className={style.workCardItem}>
-      <div className={style.workCardItem_thumbnail}>
-        <img src={thumbnail} />
-        <div className={classNames(style.workCardItem_imageTag, { isLive })}>{statusText}</div>
+    <div className="work-card-item _stack-1.5">
+      <div className="relative flex">
+        <img className="w-full aspect-16/9 object-cover rounded contrast-90" src={thumbnail} />
+        <div
+          className={classNames(
+            'absolute right-2 bottom-2 py-0.5 px-1 rounded shadow-sm text-2xs sm:text-xs bg-grayDarkest',
+            tagStatusVariants[workStatus],
+          )}
+        >
+          {workStatus === WorkStatus.Live ? '운영중' : '중지됨'}
+        </div>
       </div>
       <h3>{title}</h3>
-      {createdAt && <p className={style.workCardItem_meta}>{formatISODatePart(createdAt)}</p>}
-      <p className={style.workCardItem_description}>{description}</p>
+      {createdAt && <p className="text-sm text-gray mt-0.5">{formatISODatePart(createdAt)}</p>}
+      <p className="leading-140">{description}</p>
     </div>
   );
+};
+
+const tagStatusVariants = {
+  [WorkStatus.Live]: 'text-grayLight',
+  [WorkStatus.Legacy]: 'text-green',
 };
