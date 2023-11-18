@@ -5,6 +5,7 @@ import { Header } from '@containers/Header';
 import { Suspense } from 'react';
 
 import '@style/index.scss';
+import '@style/main.css';
 
 const siteName = 'JohnyKimBlog';
 const title = 'Johny Kim Blog';
