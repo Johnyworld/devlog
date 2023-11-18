@@ -193,6 +193,10 @@
 .overridePre {
   position: relative;
 
+  pre {
+    padding-right: 70px;
+  }
+
   .copyButton {
     position: absolute;
     top: 12px;
@@ -204,6 +208,7 @@
     align-items: center;
     border-radius: 4px;
   }
+
   @include isHoverableDivice {
     .copyButton {
       &:hover {
@@ -213,10 +218,6 @@
   }
 
   @include isMobileOrLessWidth {
-    pre {
-      padding-right: 70px;
-    }
-
     .copyButton {
       background-color: #232325;
       right: -4px;
