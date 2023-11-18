@@ -28,4 +28,14 @@
   ._stack-1\.5 {
     @apply [&>*:not(:first-child)]:mt-1.5;
   }
+  ._stack-1 {
+    @apply [&>*:not(:first-child)]:mt-1;
+  }
+  ._clickable {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        @apply bg-clickable cursor-pointer;
+      }
+    }
+  }
 }

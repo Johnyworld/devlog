@@ -11,6 +11,7 @@ $light-theme: (
   gray-weaker: #ededf3,
   gray-weakest: #f8f9f9,
   glass: #ffffffcc,
+  clickable: rgba(0, 0, 0, 0.03),
 );
 
 $dark-theme: (
@@ -24,6 +25,7 @@ $dark-theme: (
   gray-weaker: #3b3b3c,
   gray-weakest: #303032,
   glass: #272728cc,
+  clickable: rgba(255, 255, 255, 0.03),
 );
 
 $font-sizes: (

@@ -14,11 +14,13 @@ module.exports = {
       grayWeaker: 'var(--color-gray-weaker)',
       grayWeakest: 'var(--color-gray-weakest)',
       glass: 'var(--color-glass)',
+      clickable: 'var(--color-clickable)',
     },
     fontSize: {
       '2xl': 'var(--font-huge)',
       xl: 'var(--font-big)',
       lg: 'var(--font-large)',
+      md: 'var(--font-medium)',
       base: 'var(--font-regular)',
       sm: 'var(--font-small)',
       xs: 'var(--font-tiny)',
