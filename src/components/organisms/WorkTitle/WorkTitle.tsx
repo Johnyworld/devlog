@@ -1,7 +1,7 @@
 import { Work } from 'type';
-import style from './WorkTitle.module.scss';
 import { formatISODatePart } from '@utils/string';
 import Link from 'next/link';
+import classNames from 'classnames';
 
 interface Props {
   data: Work;
@@ -11,30 +11,30 @@ export const WorkTitle = ({ data }: Props) => {
   const { title, createdAt, description, href, github } = data;
 
   return (
-    <div className={style.workTitle}>
+    <div className={classNames('work-title', '_stack-16')}>
       <div>
         <h1>{title}</h1>
-        {createdAt && <p className={style.workTitle_createdAt}>{formatISODatePart(createdAt)}</p>}
+        {createdAt && <p className="text-sm text-gray mt-1">{formatISODatePart(createdAt)}</p>}
       </div>
 
-      {description && <p className={style.workTitle_description}>{description}</p>}
+      {description && <p className="leading-140">{description}</p>}
 
       {(href || github) && (
-        <div>
+        <div className="text-sm _stack-1.5">
           {href && (
-            <div className={style.workTitle_link}>
+            <div>
               <strong>방문하기</strong>
               <span> · </span>
-              <Link href={href} target="_blank">
+              <Link href={href} target="_blank" className="text-primary">
                 {href}
               </Link>
             </div>
           )}
           {github && (
-            <div className={style.workTitle_link}>
+            <div>
               <strong>깃헙</strong>
               <span> · </span>
-              <Link href={github} target="_blank">
+              <Link href={github} target="_blank" className="text-primary">
                 {github}
               </Link>
             </div>
