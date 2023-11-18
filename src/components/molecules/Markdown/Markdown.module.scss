@@ -145,6 +145,9 @@
 
   a {
     color: $color-primary;
+    &:hover {
+      text-decoration: underline;
+    }
     :link,
     :visited {
       color: $color-primary;
