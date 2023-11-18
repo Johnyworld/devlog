@@ -1,29 +1,27 @@
-@import '@style/variables';
-
 .workTitle {
   > *:not(:first-child) {
     margin-top: 16px;
   }
 
   .workTitle_createdAt {
-    font-size: $font-small;
-    color: $color-gray;
+    font-size: var(--font-small);
+    color: var(--color-gray);
     margin-top: 4px;
   }
 
   .workTitle_description {
     line-height: 1.4;
-    // color: $color-gray-strong;
+    // color: var(--color-grayStrong);
   }
 
   .workTitle_link {
-    font-size: $font-small;
+    font-size: var(--font-small);
     &:not(:first-child) {
       margin-top: 6px;
     }
 
     a {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
 }

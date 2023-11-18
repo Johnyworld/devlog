@@ -1,8 +1,6 @@
-@import '@style/variables';
-
 .markdownTOC {
   font-size: 13px;
-  color: $color-gray;
+  color: var(--color-gray);
 
   ul ul {
     margin-left: 20px;

@@ -1,4 +1,3 @@
-@import '@style/variables';
 @import '@style/mixins';
 
 .themeToggleButton {
@@ -10,7 +9,7 @@
 
   @include isHoverableDivice {
     &:hover {
-      background-color: $color-gray-weakest;
+      background-color: var(--color-gray-weakest);
     }
   }
 }

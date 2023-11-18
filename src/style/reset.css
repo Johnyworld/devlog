@@ -1,9 +1,6 @@
-@import '@style/variables';
-@import '@style/mixins';
-
 html {
   scroll-behavior: smooth;
-  background-color: $color-bg;
+  background-color: var(--color-bg);
 }
 
 body {
@@ -24,15 +21,17 @@ body {
     'Segoe UI Symbol',
     sans-serif;
   font-weight: 400;
-  color: $color-letter;
+  color: var(--color-letter);
   word-break: break-word;
+}
+body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 100vh;
-  main {
-    flex-grow: 1;
-  }
+}
+body main {
+  flex-grow: 1;
 }
 
 code {
@@ -58,15 +57,15 @@ button {
 }
 
 h1 {
-  font-size: $font-huge;
+  font-size: var(--font-huge);
 }
 
 h2 {
-  font-size: $font-big;
+  font-size: var(--font-big);
 }
 
 h3 {
-  font-size: $font-large;
+  font-size: var(--font-large);
 }
 
 h1,
@@ -76,12 +75,7 @@ h4,
 h5,
 h6 {
   word-break: keep-all;
-  color: $color-letter-strong;
-  sub {
-    vertical-align: baseline;
-    font-size: inherit;
-    font-weight: 100;
-  }
+  color: var(--color-letter-strong);
 }
 
 li {
@@ -90,33 +84,15 @@ li {
 
 strong {
   font-weight: 700;
-  color: $color-letter-strong;
+  color: var(--color-letter-strong);
 }
 
 a {
   color: unset;
   text-decoration: none;
-  strong {
-    color: inherit;
-  }
 }
-
-.tag {
-  margin-right: 0.2em;
-  border-radius: 50;
-  background-color: #daebf2;
-  color: #3e778c;
-  padding: 0.2em 0.5em;
-  font-size: 15px;
-  font-weight: 700;
-
-  &::before {
-    content: '# ';
-  }
-
-  table {
-    border-collapse: collapse;
-  }
+a strong {
+  color: inherit;
 }
 
 button {
@@ -153,29 +129,29 @@ table {
   font-size: 14px;
   width: 100%;
   min-width: 400px;
-
-  th,
-  td {
-    padding: 8px 0;
-    padding-right: 16px;
-    border-bottom: 1px solid $color-gray-weaker;
-    vertical-align: top;
-    line-height: 1.4;
-  }
-  th {
-    border-top: 1px solid $color-gray-weaker;
-  }
-  td:last-child {
-    padding-right: 8px;
-  }
+}
+th,
+td {
+  padding: 8px 0;
+  padding-right: 16px;
+  border-bottom: 1px solid var(--color-gray-weaker);
+  vertical-align: top;
+  line-height: 1.4;
+}
+th {
+  border-top: 1px solid var(--color-gray-weaker);
+}
+td:last-child {
+  padding-right: 8px;
 }
 
 .utterances_wrapper {
   margin-top: 80px;
   margin-left: -4px;
   margin-right: -4px;
-
-  @media print {
+}
+@media print {
+  .utterances_wrapper {
     display: none;
   }
 }

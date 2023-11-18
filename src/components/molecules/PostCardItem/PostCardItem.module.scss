@@ -1,4 +1,3 @@
-@import '@style/variables';
 @import '@style/mixins';
 
 .postCardItem {
@@ -8,7 +7,7 @@
 
   @include isHoverableDivice() {
     &:hover {
-      background-color: $color-gray-weakest;
+      background-color: var(--color-gray-weakest);
     }
   }
 
@@ -21,7 +20,7 @@
   }
 
   .postCardItem_createdAt {
-    font-size: $font-small;
-    color: $color-gray;
+    font-size: var(--font-small);
+    color: var(--color-gray);
   }
 }

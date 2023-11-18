@@ -1,4 +1,3 @@
-@import '@style/variables';
 @import '@style/mixins';
 
 .markdown {
@@ -15,9 +14,15 @@
     &:before {
       content: '';
       display: block;
-      height: calc(2em + $header-height);
-      margin-top: calc(-2em - $header-height);
+      height: calc(2em + var(--header-height));
+      margin-top: calc(-2em - var(--header-height));
       visibility: hidden;
+    }
+
+    sub {
+      vertical-align: baseline;
+      font-size: inherit;
+      font-weight: 100;
     }
   }
 
@@ -69,7 +74,7 @@
   }
 
   code {
-    background-color: $color-gray-weakest;
+    background-color: var(--color-gray-weakest);
     padding: 2px 4px;
     border-radius: 4px;
     hyphens: none;
@@ -94,9 +99,9 @@
 
   blockquote {
     padding: 12px 15px;
-    border-left: 3px solid $color-gray-weaker;
-    background-color: $color-gray-weakest;
-    color: $color-gray-strong;
+    border-left: 3px solid var(--color-gray-weaker);
+    background-color: var(--color-gray-weakest);
+    color: var(--color-grayStrong);
 
     h1,
     h2,
@@ -105,7 +110,7 @@
     h5,
     h6,
     strong {
-      color: $color-gray-stronger;
+      color: var(--color-grayStronger);
     }
 
     > *:first-child {
@@ -136,7 +141,7 @@
 
   hr {
     margin: 50px 0;
-    border: 1px solid $color-gray-weaker;
+    border: 1px solid var(--color-gray-weaker);
     border-bottom: 0;
     @include isMobileOrLessWidth {
       margin: 30px 0;
@@ -144,13 +149,13 @@
   }
 
   a {
-    color: $color-primary;
+    color: var(--color-primary);
     &:hover {
       text-decoration: underline;
     }
     :link,
     :visited {
-      color: $color-primary;
+      color: var(--color-primary);
     }
   }
 
@@ -163,7 +168,7 @@
 
     summary {
       position: relative;
-      color: $color-gray-strong;
+      color: var(--color-grayStrong);
       font-weight: 700;
       padding: 6px;
       cursor: pointer;
@@ -179,7 +184,7 @@
         }
       }
       &:hover {
-        background-color: $color-gray-weakest;
+        background-color: var(--color-gray-weakest);
       }
     }
   }

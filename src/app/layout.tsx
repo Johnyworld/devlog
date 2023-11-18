@@ -4,7 +4,7 @@ import { Footer } from '@containers/Footer';
 import { Header } from '@containers/Header';
 import { Suspense } from 'react';
 
-import '@style/index.scss';
+import '@style/theme.scss';
 import '@style/main.css';
 
 const siteName = 'JohnyKimBlog';

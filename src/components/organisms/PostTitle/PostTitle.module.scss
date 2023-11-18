@@ -1,16 +1,14 @@
-@import '@style/variables';
-
 .postTitle {
   .postTitle_title {
     margin-bottom: 8px;
   }
 
   .postTitle_description {
-    font-size: $font-small;
-    color: $color-gray;
+    font-size: var(--font-small);
+    color: var(--color-gray);
   }
 
   .postTitle_tag {
-    color: $color-primary;
+    color: var(--color-primary);
   }
 }
