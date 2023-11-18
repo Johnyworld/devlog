@@ -1,7 +1,6 @@
 'use client';
 
 import { HTMLAttributes } from 'react';
-import styles from './MarkdownTOC.module.scss';
 import classNames from 'classnames';
 import Link from 'next/link';
 
@@ -20,7 +19,10 @@ export const MarkdownTOC = ({ content, ...props }: Props) => {
   const headings = getHeadings(content);
   const headingTree = generateHeadingTree(headings);
   return (
-    <div {...props} className={classNames(styles.markdownTOC, props.className)}>
+    <div
+      {...props}
+      className={classNames('markdown-toc', 'text-xs text-gray print:hidden', props.className)}
+    >
       <HeadingTree headings={headingTree} headingId={undefined} />
     </div>
   );
@@ -38,10 +40,15 @@ const HeadingTree = ({
     return null;
   }
   return (
-    <ul>
+    <ul className="[ul_&]:ml-5">
       {children.map(item => (
-        <li key={item.id}>
-          <Link href={`#${item.title}`}>{item.title}</Link>
+        <li key={item.id} className="mt-px">
+          <Link
+            className="block underline w-full px-1 pt-0.5 pb-1 -mx-1 rounded-sm _clickable"
+            href={`#${item.title}`}
+          >
+            {item.title}
+          </Link>
           <HeadingTree headings={headings} headingId={item.id} />
         </li>
       ))}

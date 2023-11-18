@@ -1,7 +1,6 @@
 'use client';
 
 import { HTMLAttributes } from 'react';
-import styles from './ThemeToggleButton.module.scss';
 import classNames from 'classnames';
 import { Theme } from 'type';
 import { NoSSRRendering } from '@utils/NoSSRRendering';
@@ -14,8 +13,13 @@ interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
 export const ThemeToggleButton = ({ theme, onClick, className, ...props }: Props) => {
   return (
     <NoSSRRendering>
-      <div {...props} className={classNames(styles.themeToggleButton, className)}>
-        <button onClick={onClick}>{theme === 'light' ? '🌞' : '🌜'}</button>
+      <div
+        {...props}
+        className={classNames('theme-toggle-button', 'rounded _clickable', className)}
+      >
+        <button onClick={onClick} className="py-0.5 px-1">
+          {theme === 'light' ? '🌞' : '🌜'}
+        </button>
       </div>
     </NoSSRRendering>
   );
