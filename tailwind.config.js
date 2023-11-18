@@ -28,9 +28,18 @@ module.exports = {
       140: 1.4,
       160: 1.6,
     },
+    screens: {
+      sm: '566px',
+      md: '768px',
+    },
     extend: {
       spacing: {
         1.5: '6px',
+        pageWidth: 'var(--page-width)',
+        pageMargin: 'var(--page-margin)',
+      },
+      maxWidth: {
+        pageWidth: 'var(--page-width)',
       },
     },
   },

@@ -1,5 +1,3 @@
-import style from './Divider.module.scss';
-
 export const Divider = () => {
-  return <div className={style.divider} />;
+  return <hr className="divider h-px border-none bg-grayWeaker my-8 mx-5 sm:my-10 sm:mx-0" />;
 };

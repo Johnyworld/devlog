@@ -1,13 +1,19 @@
 import { HTMLAttributes } from 'react';
-import style from './GoToTopButton.module.scss';
 import classNames from 'classnames';
 
 interface Props extends Omit<HTMLAttributes<HTMLButtonElement>, 'children'> {}
 
 export const GoToTopButton = ({ ...props }: Props) => {
   return (
-    <div className={style.goToTopButton_Positioner}>
-      <button {...props} className={classNames(style.goToTopButton, props.className)}>
+    <div className="go-to-top-positioner fixed bottom-0 left-0 right-0 max-w-pageWidth p-pageMargin mx-auto">
+      <button
+        {...props}
+        className={classNames(
+          'go-to-top-button',
+          'absolute bottom-4 right-4 sm:right-8 md:-right-8 w-10 h-10 _flex-center bg-glass rounded backdrop-blur-sm _no-print',
+          props.className,
+        )}
+      >
         <svg
           width="26"
           height="26"
