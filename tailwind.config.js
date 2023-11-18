@@ -35,11 +35,13 @@ module.exports = {
     extend: {
       spacing: {
         1.5: '6px',
+        30: '120px',
         pageWidth: 'var(--page-width)',
         pageMargin: 'var(--page-margin)',
       },
       maxWidth: {
         pageWidth: 'var(--page-width)',
+        '8/10': '80%',
       },
     },
   },

@@ -1,5 +1,4 @@
 import { HTMLAttributes, ReactNode } from 'react';
-import style from './PageContent.module.scss';
 import classNames from 'classnames';
 
 interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -8,7 +7,13 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 
 const PageContent = ({ children, ...restProps }: Props) => {
   return (
-    <section {...restProps} className={classNames(style.pageContent, restProps.className)}>
+    <section
+      {...restProps}
+      className={classNames(
+        'page-content relative max-w-pageWidth px-pageMargin mx-auto print:max-w-8/10',
+        restProps.className,
+      )}
+    >
       {children}
     </section>
   );

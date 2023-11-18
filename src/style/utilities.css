@@ -28,9 +28,4 @@
   ._stack-1\.5 {
     @apply [&>*:not(:first-child)]:mt-1.5;
   }
-  ._no-print {
-    @media print {
-      display: none;
-    }
-  }
 }
