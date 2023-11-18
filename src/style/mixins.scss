@@ -5,25 +5,25 @@
 }
 
 @mixin isMobileOrLessWidth {
-  @media screen and (max-width: calc(var(--bp-1) - 1px)) {
+  @media screen and (max-width: 565px) {
     @content;
   }
 }
 
 @mixin isTabletOrLessWidth {
-  @media screen and (max-width: calc(var(--bp-2) - 1px)) {
+  @media screen and (max-width: 767px) {
     @content;
   }
 }
 
 @mixin isTabletOrMoreWidth {
-  @media screen and (min-width: var(--bp-1)) {
+  @media screen and (min-width: 566px) {
     @content;
   }
 }
 
 @mixin isDesktopOrMoreWidth {
-  @media screen and (min-width: var(--bp-2)) {
+  @media screen and (min-width: 768px) {
     @content;
   }
 }
