@@ -4,7 +4,6 @@ import { usePathname } from 'next/navigation';
 import PageContent from '@components/layouts/PageContent';
 import { getRoute } from '@utils/routes';
 import { NavigationMenu } from '../../components/organisms/NavigationMenu';
-import style from './Header.module.scss';
 import { ThemeToggle } from '@containers/ThemeToggle';
 
 export const Header = () => {
@@ -12,10 +11,10 @@ export const Header = () => {
   const currentMenu = pathname.split('/')[1];
 
   return (
-    <header className={style.header}>
+    <header className="header sticky top-0 bg-glass blur-sm z-10 shadow-header md:shadow-none">
       <PageContent>
-        <div className={style.header_container}>
-          <nav>
+        <div className="flex justify-between items-center">
+          <nav className="flex items-center h-headerHeight">
             <NavigationMenu
               currentMenu={currentMenu || 'post'}
               data={[

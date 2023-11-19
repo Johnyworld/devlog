@@ -1,13 +1,14 @@
 'use client';
 
 import PageContent from '@components/layouts/PageContent';
-import style from './Footer.module.scss';
 
 export const Footer = () => {
   return (
-    <footer className={style.footer}>
+    <footer className="footer py-3 print:hidden">
       <PageContent>
-        <p>Copyright 2023. All page content is property of 김재환.</p>
+        <p className="text-2xs text-grayStrong">
+          Copyright 2023. All page content is property of 김재환.
+        </p>
       </PageContent>
     </footer>
   );
