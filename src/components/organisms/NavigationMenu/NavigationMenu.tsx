@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { NavigationMenuItem } from '../NavigationMenuItem';
-import style from './NavigationMenu.module.scss';
 
 interface NavigationMenu {
   id: string;
@@ -15,7 +14,7 @@ interface Props {
 
 export const NavigationMenu = ({ data, currentMenu }: Props) => {
   return (
-    <ul className={style.navigationMenu}>
+    <ul className="navigation-menu flex items-center gap-1 -mx-2">
       {data.map(item => (
         <li key={item.id}>
           <Link href={item.href}>

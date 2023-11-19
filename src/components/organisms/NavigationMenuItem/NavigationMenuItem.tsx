@@ -1,5 +1,4 @@
 import cx from 'classnames';
-import style from './NavigationMenuItem.module.scss';
 
 interface Props {
   title: string;
@@ -7,5 +6,13 @@ interface Props {
 }
 
 export const NavigationMenuItem = ({ title, selected }: Props) => {
-  return <div className={cx(style.navigationMenuItem, { selected })}>{title}</div>;
+  return (
+    <div
+      className={cx('navigation-menu-item', 'sm:text-sm py-1.5 md:py-1 px-2 rounded _clickable', {
+        'font-bold': selected,
+      })}
+    >
+      {title}
+    </div>
+  );
 };
