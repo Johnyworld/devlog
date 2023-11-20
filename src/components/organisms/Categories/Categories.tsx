@@ -1,10 +1,7 @@
 import { getCategoriesFromPosts } from '@utils/post';
-import Link from 'next/link';
 import { Post } from 'type';
-import style from './Categories.module.scss';
-import { getRoute } from '@utils/routes';
-import classNames from 'classnames';
 import { ALL_CATEGORIES_KEY } from '@utils/constants';
+import { CategoryItem } from './Categoryitem';
 
 interface Props {
   posts: Post[];
@@ -15,28 +12,22 @@ const Categories = ({ posts, currentCategory }: Props) => {
   const categories = getCategoriesFromPosts(posts);
 
   return (
-    <div className={style.categories}>
-      <Link
-        href={getRoute.root()}
-        className={classNames(style.categories_tag, {
-          selected: currentCategory === ALL_CATEGORIES_KEY,
-        })}
-      >
-        <span>#전체보기</span>
-        <span className={style.categories_count}>{posts.length}</span>
-      </Link>
+    <div className="categories flex items-center flex-wrap gap-x-1 gap-y-2">
+      <CategoryItem
+        name="전체보기"
+        count={posts.length}
+        isSelected={currentCategory === ALL_CATEGORIES_KEY}
+      />
 
       {Object.entries(categories)
         .sort((a, b) => b[1] - a[1])
         .map(([category, count]) => (
-          <Link
+          <CategoryItem
             key={category}
-            href={getRoute.rootCategoryQueryString(category)}
-            className={classNames(style.categories_tag, { selected: currentCategory === category })}
-          >
-            <span>#{category}</span>
-            <span className={style.categories_count}>{count}</span>
-          </Link>
+            name={category}
+            count={count}
+            isSelected={currentCategory === category}
+          />
         ))}
     </div>
   );
