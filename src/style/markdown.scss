@@ -190,14 +190,14 @@
   }
 }
 
-.overridePre {
+.markdown-pre {
   position: relative;
 
   pre {
     padding-right: 70px;
   }
 
-  .copyButton {
+  .markdown-copy-button {
     position: absolute;
     top: 12px;
     right: 12px;
@@ -210,7 +210,7 @@
   }
 
   @include isHoverableDivice {
-    .copyButton {
+    .markdown-copy-button {
       &:hover {
         background-color: #232325;
       }
@@ -218,7 +218,7 @@
   }
 
   @include isMobileOrLessWidth {
-    .copyButton {
+    .markdown-copy-button {
       background-color: #232325;
       right: -4px;
       top: 16px;
@@ -226,7 +226,7 @@
   }
 }
 
-div.overrideTable {
+div.markdown-table {
   margin-top: 30px;
   margin-bottom: 30px;
 
@@ -238,7 +238,7 @@ div.overrideTable {
   }
 }
 
-div.overrideIframe {
+div.markdown-iframe {
   @include isMobileOrLessWidth {
     margin-left: -20px;
     margin-right: -20px;

@@ -2,7 +2,6 @@
 
 import { Prism as SyntaxHighlighter, SyntaxHighlighterProps } from 'react-syntax-highlighter';
 import { CSSProperties, HTMLAttributes, isValidElement, useState } from 'react';
-import style from '../Markdown.module.scss';
 import { useDebounce } from '@utils/useDebounce';
 import CopyToClipboard from 'react-copy-to-clipboard';
 
@@ -24,7 +23,7 @@ const CodeBlock = ({ className, children }: SyntaxHighlighterProps) => {
   }
 
   return (
-    <div className={style.overridePre}>
+    <div className="markdown-pre">
       <SyntaxHighlighter language={lang} style={customMaterialDark}>
         {children}
       </SyntaxHighlighter>
@@ -42,7 +41,7 @@ const CodeBlock = ({ className, children }: SyntaxHighlighterProps) => {
           setCopied(true);
         }}
       >
-        <button className={style.copyButton}>
+        <button className="markdown-copy-button">
           {copied ? (
             <svg
               width="14"

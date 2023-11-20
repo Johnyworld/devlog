@@ -1,7 +1,6 @@
 'use client';
 
 import MarkdownToJSX, { MarkdownToJSX as MarkdownToJSXType } from 'markdown-to-jsx';
-import style from './Markdown.module.scss';
 import { OverrideAnchorByLink } from './overrides/OverrideAnchorByLink';
 import { usePathname } from 'next/navigation';
 import { CopyableContent } from '../CopyableContent';
@@ -20,7 +19,7 @@ const Markdown = ({ children, options }: Props) => {
 
   return (
     <MarkdownToJSX
-      className={style.markdown}
+      className="markdown"
       options={{
         ...options,
         slugify: str => str,
