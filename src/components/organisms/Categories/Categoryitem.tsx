@@ -1,6 +1,4 @@
-import { getRoute } from '@utils/routes';
 import classNames from 'classnames';
-import Link from 'next/link';
 
 interface Props {
   name: string;
@@ -10,14 +8,13 @@ interface Props {
 
 export const CategoryItem = ({ name, count, isSelected }: Props) => {
   return (
-    <Link
-      href={getRoute.rootCategoryQueryString(name)}
+    <div
       className={classNames('text-sm text-primary flex items-center gap-px', {
-        'font-bold': isSelected,
+        [isSelected ? 'font-bold' : 'opacity-80']: true,
       })}
     >
       <span>#{name}</span>
       <span className="text-xs text-gray">{count}</span>
-    </Link>
+    </div>
   );
 };

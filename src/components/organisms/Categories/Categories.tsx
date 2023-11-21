@@ -2,6 +2,8 @@ import { getCategoriesFromPosts } from '@utils/post';
 import { Post } from 'type';
 import { ALL_CATEGORIES_KEY } from '@utils/constants';
 import { CategoryItem } from './Categoryitem';
+import Link from 'next/link';
+import { getRoute } from '@utils/routes';
 
 interface Props {
   posts: Post[];
@@ -13,21 +15,25 @@ const Categories = ({ posts, currentCategory }: Props) => {
 
   return (
     <div className="categories flex items-center flex-wrap gap-x-1 gap-y-2">
-      <CategoryItem
-        name="전체보기"
-        count={posts.length}
-        isSelected={currentCategory === ALL_CATEGORIES_KEY}
-      />
+      <Link href={'/'}>
+        <CategoryItem
+          name="전체보기"
+          count={posts.length}
+          isSelected={currentCategory === ALL_CATEGORIES_KEY}
+        />
+      </Link>
 
       {Object.entries(categories)
         .sort((a, b) => b[1] - a[1])
         .map(([category, count]) => (
-          <CategoryItem
-            key={category}
-            name={category}
-            count={count}
-            isSelected={currentCategory === category}
-          />
+          <Link href={getRoute.rootCategoryQueryString(category)}>
+            <CategoryItem
+              key={category}
+              name={category}
+              count={count}
+              isSelected={currentCategory === category}
+            />
+          </Link>
         ))}
     </div>
   );
