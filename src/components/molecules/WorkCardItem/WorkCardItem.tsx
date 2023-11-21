@@ -19,14 +19,7 @@ export const WorkCardItem = ({ workStatus, title, description, thumbnail, create
     <div className="work-card-item _stack-1.5">
       <div className="relative flex">
         <img className="w-full aspect-16/9 object-cover rounded contrast-90" src={thumbnail} />
-        <div
-          className={classNames(
-            'absolute right-2 bottom-2 py-0.5 px-1 rounded shadow-sm text-2xs sm:text-xs bg-grayDarkest',
-            tagStatusVariants[workStatus],
-          )}
-        >
-          {workStatus === WorkStatus.Live ? '운영중' : '중지됨'}
-        </div>
+        <LiveTag workStatus={workStatus} />
       </div>
       <h3>{title}</h3>
       {createdAt && <p className="text-sm text-gray mt-0.5">{formatISODatePart(createdAt)}</p>}
@@ -35,7 +28,20 @@ export const WorkCardItem = ({ workStatus, title, description, thumbnail, create
   );
 };
 
+const LiveTag = ({ workStatus }: { workStatus: WorkStatus }) => {
+  return (
+    <div
+      className={classNames(
+        'absolute right-2 bottom-2 py-0.5 px-1 rounded shadow-sm text-2xs sm:text-xs bg-grayDarkest',
+        tagStatusVariants[workStatus],
+      )}
+    >
+      {workStatus === WorkStatus.Live ? '운영중' : '중지됨'}
+    </div>
+  );
+};
+
 const tagStatusVariants = {
-  [WorkStatus.Live]: 'text-grayLight',
-  [WorkStatus.Legacy]: 'text-green',
+  [WorkStatus.Live]: 'text-green',
+  [WorkStatus.Legacy]: 'text-grayLight',
 };
