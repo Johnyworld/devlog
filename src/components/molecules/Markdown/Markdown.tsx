@@ -7,22 +7,24 @@ import { CopyableContent } from '../CopyableContent';
 import { OverridePre } from './overrides/OverridePre';
 import { OverrideTable } from './overrides/OverrideTable';
 import { OverrideIframe } from './overrides/OverrideIframe';
+import classNames from 'classnames';
 
 interface Props {
+  className?: string;
   children: string;
   options?: MarkdownToJSXType.Options;
 }
 
-const Markdown = ({ children, options }: Props) => {
+const Markdown = ({ className, children, options }: Props) => {
   const pathname = usePathname();
   const basePath = typeof window !== 'undefined' ? window.location.origin + pathname : '';
 
   return (
     <MarkdownToJSX
-      className="markdown"
+      className={classNames('markdown', className)}
       options={{
         ...options,
-        slugify: str => str,
+        slugify: str => str.replace(/\s/g, '-'),
         overrides: {
           a: OverrideAnchorByLink,
           pre: OverridePre,

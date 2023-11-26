@@ -22,7 +22,7 @@ export default async function Page() {
   return (
     <Main>
       <PageContent>
-        <Markdown>{markdownContent}</Markdown>
+        <Markdown className="cv">{markdownContent}</Markdown>
       </PageContent>
     </Main>
   );

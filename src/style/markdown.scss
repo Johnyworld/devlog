@@ -24,6 +24,10 @@
       font-size: inherit;
       font-weight: 100;
     }
+
+    button {
+      text-align: left;
+    }
   }
 
   > div,
@@ -186,6 +190,41 @@
       &:hover {
         background-color: var(--color-gray-weakest);
       }
+    }
+  }
+}
+
+.markdown.cv {
+  @media print {
+    h2 {
+      border-bottom: 2px solid;
+      padding-bottom: 4px;
+    }
+
+    > *:not(h1, h2, h3) {
+      padding-left: calc(30% + 10px);
+    }
+
+    h3 {
+      float: left;
+      max-width: 30%;
+      font-size: var(--font-large);
+    }
+
+    h2 + h3 {
+      margin-top: 18px;
+    }
+
+    h2 + h3 + * {
+      margin-top: 40px;
+    }
+
+    h3 + * {
+      margin-top: 62px;
+    }
+
+    ul {
+      padding-left: calc(30% + 24px);
     }
   }
 }
