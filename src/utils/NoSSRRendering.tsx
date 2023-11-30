@@ -1,19 +1,13 @@
-import { ReactNode, useEffect, useState } from 'react';
+'use client';
 
-interface Props {
-  children: ReactNode;
-}
+import dynamic from 'next/dynamic';
 
-export const NoSSRRendering = ({ children }: Props) => {
-  const [isClientRendering, setClientRendering] = useState(false);
+type Props = { children: JSX.Element };
 
-  useEffect(() => {
-    setClientRendering(true);
-  }, []);
-
-  if (!isClientRendering) {
-    return null;
-  }
-
-  return <>{children}</>;
+const NoSSRRendering = ({ children }: Props) => {
+  return children;
 };
+
+export default dynamic(() => Promise.resolve(NoSSRRendering), {
+  ssr: false,
+});

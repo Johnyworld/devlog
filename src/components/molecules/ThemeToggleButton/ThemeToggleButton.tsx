@@ -3,7 +3,7 @@
 import { HTMLAttributes } from 'react';
 import classNames from 'classnames';
 import { Theme } from 'type';
-import { NoSSRRendering } from '@utils/NoSSRRendering';
+import NoSSRRendering from '@utils/NoSSRRendering';
 
 interface Props extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> {
   theme: Theme | null;
