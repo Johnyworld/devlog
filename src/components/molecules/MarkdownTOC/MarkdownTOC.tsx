@@ -12,6 +12,7 @@ interface Heading {
   id: number;
   level: number;
   title: string;
+  slug: string;
   parent?: number;
 }
 
@@ -45,7 +46,7 @@ const HeadingTree = ({
         <li key={item.id} className="mt-px">
           <Link
             className="block underline w-full px-1 pt-0.5 pb-1 -mx-1 rounded-sm _clickable"
-            href={`#${item.title}`}
+            href={`#${item.slug}`}
           >
             {item.title}
           </Link>
@@ -67,6 +68,7 @@ const getHeadings = (content: string): Heading[] =>
         id: i,
         level: level.length,
         title,
+        slug: title.replace(/\s/g, '-'),
       };
     });
 
