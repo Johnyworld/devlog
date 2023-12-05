@@ -117,6 +117,14 @@
       color: var(--color-grayStronger);
     }
 
+    > div,
+    > ul,
+    > p,
+    > pre,
+    > blockquote {
+      margin: 12px 0;
+    }
+
     > *:first-child {
       margin-top: 0;
     }
