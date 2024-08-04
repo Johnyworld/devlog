@@ -1,4 +1,6 @@
 import dotenv from 'dotenv';
+import fs from 'fs';
+import path from 'path';
 
 dotenv.config({ path: '.env.local' });
 
@@ -16,7 +18,30 @@ const main = () => {
   if (!config.vaultSrc) {
     return;
   }
-  // Do something
+  const mdFilePaths = scanMdFiles(config.vaultSrc);
+  console.log(mdFilePaths);
+};
+
+const scanMdFiles = (rootPath: string) => {
+  const stack: string[] = [];
+  const result: string[] = [];
+  const dfs = (dir: string) => {
+    const files = fs.readdirSync(dir);
+    files.forEach(file => {
+      const filePath = `${dir}/${file}`;
+      if (fs.statSync(filePath).isDirectory()) {
+        stack.push(file);
+        dfs(filePath);
+        stack.pop();
+      } else {
+        if (path.extname(filePath) === '.md') {
+          result.push(filePath);
+        }
+      }
+    });
+  };
+  dfs(rootPath);
+  return result;
 };
 
 main();
