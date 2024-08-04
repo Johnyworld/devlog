@@ -22,15 +22,6 @@
   ._fixed-top {
     @apply fixed top-0 left-0 right-0;
   }
-  ._stack-16 {
-    @apply [&>*:not(:first-child)]:mt-4;
-  }
-  ._stack-1\.5 {
-    @apply [&>*:not(:first-child)]:mt-1.5;
-  }
-  ._stack-1 {
-    @apply [&>*:not(:first-child)]:mt-1;
-  }
   ._clickable {
     @media (hover: hover) and (pointer: fine) {
       &:hover {

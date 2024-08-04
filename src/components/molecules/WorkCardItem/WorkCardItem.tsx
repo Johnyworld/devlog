@@ -16,7 +16,7 @@ export enum WorkStatus {
 
 export const WorkCardItem = ({ workStatus, title, description, thumbnail, createdAt }: Props) => {
   return (
-    <div className="work-card-item _stack-1.5">
+    <div className="work-card-item space-y-1.5">
       <div className="relative flex">
         <img className="w-full aspect-16/9 object-cover rounded contrast-90" src={thumbnail} />
         <LiveTag workStatus={workStatus} />

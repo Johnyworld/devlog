@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 export const NotFound = () => {
   return (
-    <div className="not-found _stack-5">
+    <div className="not-found space-y-5">
       <div>
         <h1 className="text-18 font-thin">404</h1>
         <h2>찾을 수 없는 페이지입니다.</h2>

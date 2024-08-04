@@ -11,7 +11,7 @@ export const WorkTitle = ({ data }: Props) => {
   const { title, createdAt, description, href, github } = data;
 
   return (
-    <div className={classNames('work-title', '_stack-16')}>
+    <div className={classNames('work-title', 'space-y-4')}>
       <div>
         <h1>{title}</h1>
         {createdAt && <p className="text-sm text-gray mt-1">{formatISODatePart(createdAt)}</p>}
@@ -20,7 +20,7 @@ export const WorkTitle = ({ data }: Props) => {
       {description && <p className="leading-140">{description}</p>}
 
       {(href || github) && (
-        <div className="text-sm _stack-1.5">
+        <div className="text-sm space-y-1.5">
           {href && (
             <div>
               <strong>방문하기</strong>

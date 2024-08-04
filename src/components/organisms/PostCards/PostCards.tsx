@@ -8,7 +8,7 @@ interface Props {
 
 const PostCards = ({ posts }: Props) => {
   return (
-    <ul className="post-cards _stack-1">
+    <ul className="post-cards space-y-1">
       {posts.map(post => {
         return (
           <li key={post.title}>
