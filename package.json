@@ -21,7 +21,7 @@
     "start": "next start",
     "lint": "next lint",
     "tsc": "tsc --noEmit --watch",
-    "gen-posts": "ts-node src/scripts/gen-posts.ts"
+    "gen-posts": "ts-node --skip-project src/scripts/gen-posts.ts"
   },
   "eslintConfig": {
     "extends": [
