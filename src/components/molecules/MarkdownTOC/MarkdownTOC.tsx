@@ -41,7 +41,7 @@ const HeadingTree = ({
     return null;
   }
   return (
-    <ul className="[ul_&]:ml-5">
+    <ul className="[ul_&]:ml-5 relative z-10">
       {children.map(item => (
         <li key={item.id} className="mt-px">
           <Link
