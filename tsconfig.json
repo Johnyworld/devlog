@@ -32,7 +32,8 @@
       "@hooks/*": ["src/hooks/*"],
       "@style/*": ["src/style/*"],
       "@utils/*": ["src/utils/*"],
-      "@stores/*": ["src/stores/*"]
+      "@stores/*": ["src/stores/*"],
+      "@data/*": ["src/data/*"]
     }
   },
   "include": ["src", ".next/types/**/*.ts"],
