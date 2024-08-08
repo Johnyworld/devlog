@@ -7,7 +7,7 @@ declare module 'type' {
     title: PostTitle;
     path: PostPath;
     tags: string[];
-    createdAt: ISODatePart;
+    createdAt?: ISODatePart;
     modifiedAt: ISOString;
   }
 
