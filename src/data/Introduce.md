@@ -9,13 +9,13 @@
 
 ## Skills
 
-| Part          | Skills                                                                                                                                                                                                       |     |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
-| Frontend      | - **React(Next), Typescript**<br>- **React Query**, MobX, Redux Toolkit<br>- Jest, React testing library<br>- Storybook, i18next, Radix, Canvas<br>- TailwindCSS, SCSS, Styled-components<br>- Event logging |     |
-| Backend       | - Node(Express)                                                                                                                                                                                              |     |
-| AWS           | - EC2, Route53, RDS(MySQL), S3                                                                                                                                                                               |     |
-| UX/UI         | - 5년간의 웹/UI 디자이너 경력                                                                                                                                                                                          |     |
-| Collaborative | - Git, Notion, Slack, Figma, Linear, Jira, Miro                                                                                                                                                              |     |
+| Part          | Skills                                                                                                                                                                                                                         |     |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
+| Frontend      | - **React(Next), Typescript**<br>- **React Query**, MobX, Redux Toolkit<br>- Vue3.4(Nuxt)<br>- Jest, React testing library<br>- Storybook, i18next, Radix, Canvas<br>- TailwindCSS, SCSS, Styled-components<br>- Event logging |     |
+| Backend       | - Node(Express)                                                                                                                                                                                                                |     |
+| AWS           | - EC2, Route53, RDS(MySQL), S3                                                                                                                                                                                                 |     |
+| UX/UI         | - 5년간의 웹/UI 디자이너 경력                                                                                                                                                                                                            |     |
+| Collaborative | - Git, Notion, Slack, Figma, Linear, Jira, Miro                                                                                                                                                                                |     |
 
 - 리액트) 다양한 UI 요구사항에 유연하게 대응하기 위한 합성 컴포넌트 패턴으로 컴포넌트를 구현하고 사용하는데 익숙합니다.
 - 리액트) Concurrent UI 패턴(Suspense, ErrorBoundary를 사용하여 API 요청 단위로 컴포넌트를 쪼개어 선언적인 로딩과 에러 화면을 관리하는 것)에 익숙합니다.
@@ -33,14 +33,19 @@ https://weolbu.com
 
 #### 사용 기술, 특이사항
 
-- Nuxt, Vue, Typescript, Next(전환중)
-- Shardcn, Radix, Tailwind, Turborepo, Storybook
+- Nuxt, Vue3.4, Typescript, Next(전환중)
+- Shadcn, Radix, Tailwind, Turborepo, Storybook
 - Primevue, Primeflex
 - Monorepo
 
+#### 디자인시스템 구축
+
+- Shadcn + Radix UI 를 사용한 Headless + Composite 컴포넌트로 유연하게 사용할 수 있는 디자인시스템 구축
+
 #### 커뮤니티 제품 개발/운영
 
-- 
+- MAU 30만 → 100만 달성
+- 제품 개발 뿐 아니라 스쿼드 목표 달성과 문제 해결을 중점으로 둡니다.
 
 ### 플렉스 (flex)
 
