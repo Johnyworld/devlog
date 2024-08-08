@@ -1,5 +1,12 @@
 [
   {
+    "title": "브라우저 탭을 닫아도 clean-up 함수가 실행 되지는 않는다",
+    "path": "src/data/posts/브라우저 탭을 닫아도 clean-up 함수가 실행 되지는 않는다.md",
+    "createdAt": "2024-01-19",
+    "modifiedAt": "2024-08-08T05:58:07.412Z",
+    "tags": ["팁"]
+  },
+  {
     "title": "Error Hiding 을 피하자",
     "path": "src/data/posts/Error Hiding 을 피하자.md",
     "createdAt": "2023-12-05",
