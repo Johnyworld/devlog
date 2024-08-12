@@ -1,5 +1,12 @@
 [
   {
+    "title": "월급쟁이부자들에서의 6개월",
+    "path": "src/data/posts/월급쟁이부자들에서의 6개월.md",
+    "createdAt": "2024-08-12",
+    "modifiedAt": "2024-08-12T11:26:40.747Z",
+    "tags": ["에세이"]
+  },
+  {
     "title": "브라우저 탭을 닫아도 clean-up 함수가 실행 되지는 않는다",
     "path": "src/data/posts/브라우저 탭을 닫아도 clean-up 함수가 실행 되지는 않는다.md",
     "createdAt": "2024-01-19",
