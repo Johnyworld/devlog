@@ -1,3 +1,4 @@
+import { POST_PUBLISH_TAG } from '../constants/post';
 import dotenv from 'dotenv';
 import fs from 'fs';
 import path from 'path';
@@ -11,7 +12,7 @@ const regTags = /(?<=- )([\s\S]*?)(?=\n)/g;
 
 const config = {
   vaultSrc: process.env.NEXT_PUBLIC_VAULT_SRC,
-  publishTag: '블로그발행',
+  publishTag: POST_PUBLISH_TAG,
   targetDir: 'src/data',
   prettier: {
     parser: 'json',

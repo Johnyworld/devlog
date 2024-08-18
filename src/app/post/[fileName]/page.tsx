@@ -9,6 +9,7 @@ import { NotFound } from '@components/organisms/NotFound';
 import { MarkdownTOC } from '@components/molecules/MarkdownTOC';
 import { Metadata } from 'next';
 import { PostComment } from '@containers/PostComment';
+import { POST_PUBLISH_TAG } from '@constants/post';
 
 interface Props {
   params: {
@@ -81,7 +82,7 @@ const getProperties = (fileContent: string) => {
   }
   return {
     createdAt,
-    tags,
+    tags: tags.filter(tag => tag !== POST_PUBLISH_TAG),
   };
 };
 
