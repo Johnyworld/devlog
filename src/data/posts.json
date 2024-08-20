@@ -1,5 +1,12 @@
 [
   {
+    "title": "웹 접근성 지침 정리",
+    "path": "src/data/posts/웹 접근성 지침 정리.md",
+    "createdAt": "2024-08-20",
+    "modifiedAt": "2024-08-20T01:32:06.045Z",
+    "tags": ["공부", "팁"]
+  },
+  {
     "title": "월급쟁이부자들에서의 6개월",
     "path": "src/data/posts/월급쟁이부자들에서의 6개월.md",
     "createdAt": "2024-08-12",
