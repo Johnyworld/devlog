@@ -2,20 +2,23 @@
 
 ## Introduce
 
-**4년 차 프론트엔드 개발자**로서 주로 웹 서비스의 개발, 운영을 담당하고 있습니다.
+**5년 차 프론트엔드 개발자**로서 주로 웹 서비스의 개발, 운영을 담당하고 있습니다.
+
+
+
 초기 멤버로 스타트업에 합류하여 서비스가 MAU 30,000을 달성하고 TIPS 프로그램에 선정되는 성장을 하는 동안 서비스의 프론트엔드 개발을 주도 하였던 경험이 있습니다.
 
 5년의 디자이너 경력이 있으며 여전히 좋은 UX/UI에 대한 관심이 있습니다. 좋은 UX란, 거슬리는 게 없는 것. 이라고 생각합니다.
 
 ## Skills
 
-| Part          | Skills                                                                                                                                                                                                                         |     |
-| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --- |
-| Frontend      | - **React(Next), Typescript**<br>- **React Query**, MobX, Redux Toolkit<br>- Vue3.4(Nuxt)<br>- Jest, React testing library<br>- Storybook, i18next, Radix, Canvas<br>- TailwindCSS, SCSS, Styled-components<br>- Event logging |     |
-| Backend       | - Node(Express)                                                                                                                                                                                                                |     |
-| AWS           | - EC2, Route53, RDS(MySQL), S3                                                                                                                                                                                                 |     |
-| UX/UI         | - 5년간의 웹/UI 디자이너 경력                                                                                                                                                                                                            |     |
-| Collaborative | - Git, Notion, Slack, Figma, Linear, Jira, Miro                                                                                                                                                                                |     |
+| Part          | Skills                                                                                                                                                                                                                                |     |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| Frontend      | - **React, Next, Typescript**<br>- **Tanstack Query**, MobX, Redux Toolkit<br>- Nuxt3.11, Vue3.4<br>- Jest, React testing library<br>- Storybook, i18next, Radix, Canvas<br>- TailwindCSS, SCSS, Styled-components<br>- Event logging |     |
+| Backend       | - Node(Express)                                                                                                                                                                                                                       |     |
+| AWS           | - EC2, Route53, RDS(MySQL), S3                                                                                                                                                                                                        |     |
+| UX/UI         | - 5년간의 웹/UI 디자이너 경력                                                                                                                                                                                                                   |     |
+| Collaborative | - Git, Notion, Slack, Figma, Linear, Jira, Miro                                                                                                                                                                                       |     |
 
 - 리액트) 다양한 UI 요구사항에 유연하게 대응하기 위한 합성 컴포넌트 패턴으로 컴포넌트를 구현하고 사용하는데 익숙합니다.
 - 리액트) Concurrent UI 패턴(Suspense, ErrorBoundary를 사용하여 API 요청 단위로 컴포넌트를 쪼개어 선언적인 로딩과 에러 화면을 관리하는 것)에 익숙합니다.
