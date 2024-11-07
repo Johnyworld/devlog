@@ -4,3 +4,9 @@
 
 @import './reset';
 @import './utilities';
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+}
